@@ -8,13 +8,22 @@ dependencies = [
     "evdev>=1.6.0",
     "pyyaml>=6.0",
     "pydantic>=2.0.0",
+    "dbus-next>=0.2.3",
+    "pillow>=12.2.0",
 ]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0.0"]
+# dbus-python and PyGObject (gi) are system packages (apt):
+#   python3-dbus, python3-gi — required for dbus-python screenshot path
+# Enable include-system-site-packages in venv to use them.
 
 [project.scripts]
 ai-gui-mcp = "src.server:run"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]

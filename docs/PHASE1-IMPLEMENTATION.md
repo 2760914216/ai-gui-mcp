@@ -181,7 +181,7 @@ class KeyboardAction(BaseModel):
     key: Optional[str] = None
 
 class ScreenAction(BaseModel):
-    action: Literal["size", "cursor"]
+    action: Literal["size", "cursor", "snapshot"]
 
 class BatchAction(BaseModel):
     tool: Literal["mouse","keyboard","screen"]
@@ -189,6 +189,34 @@ class BatchAction(BaseModel):
 
 class BatchRequest(BaseModel):
     actions: list[BatchAction]
+
+# ── P2 感知输出模型 ──
+
+class ScreenInfo(BaseModel):
+    width: int
+    height: int
+
+class CursorInfo(BaseModel):
+    x: int
+    y: int
+    source: Literal["tracked", "detected"]
+
+class UIElement(BaseModel):
+    id: str
+    role: Optional[str] = None
+    name: Optional[str] = None
+    bbox: Optional[list[int]] = None
+    states: Optional[list[str]] = None
+    parent: Optional[str] = None
+    confidence: Optional[float] = None
+
+class ScreenSnapshot(BaseModel):
+    screen: ScreenInfo
+    cursor: CursorInfo
+    screenshot: Optional[str] = None
+    elements: list[UIElement] = []
+    source: Literal["screenshot", "accessibility", "vision"]
+    note: Optional[str] = None
 ```
 
 ---
@@ -204,7 +232,9 @@ src/
 ├── backends/
 │   ├── __init__.py
 │   ├── base.py        # InputBackend 抽象接口
-│   └── uinput.py      # Linux uinput 实现
+│   ├── uinput.py      # Linux uinput 实现
+│   ├── portal.py      # xdg-desktop-portal 截图后端 (P2)
+│   └── screen.py      # ScreenBackend 抽象接口 (P2)
 └── tests/
     ├── test_mouse.py
     ├── test_keyboard.py
@@ -227,8 +257,14 @@ input:
     device_name: "ai-gui-mcp-virtual"
 
 screen:
-  width: 1920                   # 若无法自检，手动配置
-  height: 1080
+  # KMS 检测优先，此处为回退值
+  width: 2560
+  height: 1600
+
+perception:                     # P2 启用
+  screenshot:
+    method: xdg-desktop-portal
+    timeout_ms: 10000
 
 behavior:                       # P4 启用
   profile: "none"
@@ -248,6 +284,8 @@ dependencies = [
     "evdev>=1.6.0",
     "pyyaml>=6.0",
     "pydantic>=2.0.0",
+    "dbus-next>=0.2.3",
+    "pillow>=12.2.0",
 ]
 [project.optional-dependencies]
 dev = ["pytest>=8.0.0"]

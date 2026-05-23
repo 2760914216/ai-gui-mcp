@@ -12,5 +12,10 @@ screen:
   width: 2560
   height: 1600
 
+perception:
+  screenshot:
+    method: xdg-desktop-portal
+    timeout_ms: 10000
+
 behavior:
   profile: "none"

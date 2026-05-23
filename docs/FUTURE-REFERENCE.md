@@ -60,11 +60,19 @@ grim+slurp / wlr-screencopy：
 
 ### Phase 2 需确认
 
+> 📄 详见 [P2-potential-issue.md](P2-potential-issue.md) — Phase 2 潜在问题完整分析（7 个问题 + 优先级 + 建议）
+
 | # | 事项 |
 |---|------|
 | 4 | 无障碍树库：`pyatspi2` vs `dasbus` |
 | 5 | 差分截图实现方案 |
 | 6 | PipeWire 跨 compositor 兼容性 |
+| 7 | `screen_snapshot()` 语义重定义（AT-SPI2 覆盖率 ~5% 现实下） |
+| 8 | 光标校准协议（解决 P1 内部坐标与屏幕坐标脱节） |
+| 9 | D-Bus 异步模型选型（dbus-python + GLib vs dbus-next asyncio） |
+| 10 | 工具面设计：perception 能力如何融入现有 4-tool 结构 |
+| 11 | ScreenBackend 与 InputBackend 的职责边界 |
+| 12 | P2 测试策略（D-Bus mock、AT-SPI2 mock、差分算法测试） |
 
 ### Phase 3 需确认
 

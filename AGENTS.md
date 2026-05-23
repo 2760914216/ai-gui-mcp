@@ -21,6 +21,7 @@
 | P0 验证结果 | [docs/SPIKE-RESULTS.md](docs/SPIKE-RESULTS.md) |
 | 跨 session 参考 | [docs/FUTURE-REFERENCE.md](docs/FUTURE-REFERENCE.md) |
 | P1 实测问题 | [docs/P1-potential-issue.md](docs/P1-potential-issue.md) |
+| P2 潜在问题分析 | [docs/P2-potential-issue.md](docs/P2-potential-issue.md) |
 | V2 路线图（参考） | [docs/AI-GUI-MCP-ROADMAP-v2.md](docs/AI-GUI-MCP-ROADMAP-v2.md)（V2 草稿，部分设计已覆盖，仅作参考） |
 | 开发环境及规约 | [openspec/config.yaml](openspec/config.yaml) |
 
@@ -63,12 +64,16 @@ ai-gui-mcp/
 │   ├── P1-potential-issue.md
 │   └── AI-GUI-MCP-ROADMAP-v2.md
 ├── src/                              ← 源代码
+│   ├── __init__.py
 │   ├── server.py
 │   ├── config.py
 │   ├── models.py
 │   ├── backends/
+│   │   ├── __init__.py
 │   │   ├── base.py
-│   │   └── uinput.py
+│   │   ├── uinput.py
+│   │   ├── portal.py
+│   │   └── screen.py
 │   └── tests/
 │       ├── test_mouse.py
 │       ├── test_keyboard.py

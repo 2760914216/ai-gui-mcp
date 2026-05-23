@@ -12,9 +12,10 @@ from mcp.types import Tool, TextContent
 
 from src.config import load_config, _deep_get
 from src.backends.uinput import UInputBackend
-from src.models import MouseAction, KeyboardAction, ScreenAction, BatchRequest
+from src.models import MouseAction, KeyboardAction, ScreenAction, BatchRequest, CursorInfo
 
 _backend = None
+_screen_backend = None
 app = Server("ai-gui-mcp")
 
 
@@ -29,11 +30,30 @@ def get_backend():
     return _backend
 
 
+def set_screen_backend(backend):
+    global _screen_backend
+    _screen_backend = backend
+
+
+def get_screen_backend():
+    if _screen_backend is None:
+        raise RuntimeError("Screen backend not initialized. Call set_screen_backend() first.")
+    return _screen_backend
+
+
 def _create_backend(config: dict):
     backend_name = _deep_get(config, "input.backend", "uinput")
     if backend_name == "uinput":
         return UInputBackend(config=config)
     raise ValueError(f"Unknown input backend: {backend_name}")
+
+
+def _create_screen_backend(config: dict):
+    method = _deep_get(config, "perception.screenshot.method", "xdg-desktop-portal")
+    if method == "xdg-desktop-portal":
+        from src.backends.portal import XdgPortalBackend
+        return XdgPortalBackend(config=config)
+    raise ValueError(f"Unknown screen backend method: {method}")
 
 
 # ── Tool definitions ──────────────────────────────────────────────
@@ -94,14 +114,14 @@ async def list_tools():
         ),
         Tool(
             name="screen",
-            description="Get screen information (size, cursor position)",
+            description="Get screen information (size, cursor position, snapshot)",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "action": {
                         "type": "string",
-                        "enum": ["size", "cursor"],
-                        "description": "Screen query type: size (resolution), cursor (tracked position)",
+                        "enum": ["size", "cursor", "snapshot"],
+                        "description": "Screen operation: size (resolution), cursor (tracked position), snapshot (full-screen capture as base64 PNG)",
                     },
                 },
                 "required": ["action"],
@@ -256,6 +276,42 @@ def _handle_screen(action: ScreenAction) -> str:
     elif action.action == "cursor":
         x, y = backend.get_cursor_position()
         return json.dumps({"x": x, "y": y})
+    elif action.action == "snapshot":
+        return _handle_screen_snapshot(backend, get_screen_backend())
+
+
+def _handle_screen_snapshot(input_backend, screen_backend) -> str:
+    import time
+
+    t_start = time.perf_counter()
+
+    try:
+        snapshot = screen_backend.capture()
+    except Exception as e:
+        return _build_error_snapshot(input_backend, str(e))
+
+    cursor_x, cursor_y = input_backend.get_cursor_position()
+    snapshot.cursor = CursorInfo(x=cursor_x, y=cursor_y, source="tracked")
+
+    latency_ms = (time.perf_counter() - t_start) * 1000
+    if snapshot.note is None:
+        snapshot.note = f"snapshot captured via xdg-desktop-portal; latency={latency_ms:.0f}ms"
+
+    return snapshot.model_dump_json(exclude_none=False)
+
+
+def _build_error_snapshot(input_backend, error: str) -> str:
+    import json
+    w, h = input_backend.screen_size()
+    cx, cy = input_backend.get_cursor_position()
+    return json.dumps({
+        "screen": {"width": w, "height": h},
+        "cursor": {"x": cx, "y": cy, "source": "tracked"},
+        "screenshot": None,
+        "elements": [],
+        "source": "screenshot",
+        "note": f"screenshot unavailable: {error}",
+    }, ensure_ascii=False)
 
 
 def _handle_batch(request: BatchRequest) -> str:
@@ -321,6 +377,8 @@ async def main():
     config = load_config("config.yaml")
     backend = _create_backend(config)
     set_backend(backend)
+    screen_backend = _create_screen_backend(config)
+    set_screen_backend(screen_backend)
     # Log detected vs configured resolution
     w, h = backend.screen_size()
     config_w = _deep_get(config, "screen.width")
