@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "/home/ruruka/下载/oh-my-opencode-main/oh-my-opencode-main/dist/index.js","opencode-skill-creator"
+  ],
+  "model": "deepseek/deepseek-v4-pro",
+  "autoupdate": true,
+  "server": {
+    "port": 4096
+  },
+  "mcp": {
+    "ai-gui-mcp": {
+      "type": "local",
+      "command": ["uv", "--directory", "/home/ruruka/文档/srccode/ai-gui-mcp", "run", "python", "src/server.py"]
+    }
+  }
+}

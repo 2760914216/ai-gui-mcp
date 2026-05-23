@@ -1,0 +1,16 @@
+server:
+  name: "ai-gui-mcp"
+  transport: "stdio"
+
+input:
+  backend: "uinput"
+  uinput:
+    device_name: "ai-gui-mcp-virtual"
+
+screen:
+  # KMS 检测优先（当前: 2560×1600），此处为回退值
+  width: 2560
+  height: 1600
+
+behavior:
+  profile: "none"

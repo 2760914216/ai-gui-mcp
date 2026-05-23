@@ -1,0 +1,24 @@
+[project]
+name = "ai-gui-mcp"
+version = "0.1.0"
+description = "MCP Server for GUI automation on Linux Wayland"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "evdev>=1.6.0",
+    "pyyaml>=6.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+ai-gui-mcp = "src.server:run"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
