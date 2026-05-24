@@ -96,9 +96,13 @@ P3（规划）: 截图 → 视觉模型 (OmniParser/SoM) → 结构化元素
 
 ### Phase 3: Intelligence Layer（规划中）
 
-- **视觉识别**：OmniParser 本地部署 → YOLOv8 检测 → Florence-2 描述 → OCR → SoM 标注
-- **语义交互**：`screen_analyze()` / `screen_find(description)` / `screen_click_element(desc)`
-- **模型选型原则**：按当时 leaderboard 现查，不依赖历史数字。同一资源量级选最优，用户通过配置切换
+- **P3A 目标**：先做 GUI parser，而不是先做 agent。主目标是把整屏 observation 转成结构化元素与布局摘要。
+- **顶层抽象**：继续保持 `screen` 作为单一读侧入口；`screenshot` / `accessibility` / `vision` 统一视为 perception provider，而不是拆成多个“看”的 tool。
+- **接口方向**：在 `screen` 下区分 state query（如 `size` / `cursor`）与 perception query（如 `snapshot` / `analyze` / `image`）。
+- **视觉识别**：OmniParser / GUI grounding / OCR / SoM 作为 vision provider 能力候选，服务于 `analyze` 的结构化输出，而不是直接决定顶层 API。
+- **语义交互**：`find` / `click_element` 留在 P3B 或后续阶段，建立在 P3A parser 结果之上。
+- **模型选型原则**：按当时 leaderboard 现查，不依赖历史数字。同一资源量级选最优，用户通过配置切换。
+- **讨论草案**：详见 [PHASE3A-DRAFT.md](PHASE3A-DRAFT.md)。
 
 ---
 
@@ -161,6 +165,7 @@ V1 称差分区域「快约 3 倍」——这是把 input token 数与推理 wal
 | P2 Spike 计划 | [PHASE2-SPIKE.md](PHASE2-SPIKE.md) |
 | P2 Spike 结果 | [PHASE2-SPIKE-RESULTS.md](PHASE2-SPIKE-RESULTS.md) |
 | P2 实现计划 | [PHASE2-IMPLEMENTATION.md](PHASE2-IMPLEMENTATION.md) |
+| P3A 讨论草案 | [PHASE3A-DRAFT.md](PHASE3A-DRAFT.md) |
 | P2 潜在问题 | [P2-potential-issue.md](P2-potential-issue.md) |
 | 跨 session 决策 | [FUTURE-REFERENCE.md](FUTURE-REFERENCE.md) |
 | Agent 行为规约 | [../AGENTS.md](../AGENTS.md) |

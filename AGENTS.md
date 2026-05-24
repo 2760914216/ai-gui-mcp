@@ -26,6 +26,7 @@
 | P2 技术验证 | [docs/PHASE2-SPIKE.md](docs/PHASE2-SPIKE.md) |
 | P2 验证结果 | [docs/PHASE2-SPIKE-RESULTS.md](docs/PHASE2-SPIKE-RESULTS.md) |
 | P2 实现计划 | [docs/PHASE2-IMPLEMENTATION.md](docs/PHASE2-IMPLEMENTATION.md) |
+| P3A 讨论草案 | [docs/PHASE3A-DRAFT.md](docs/PHASE3A-DRAFT.md) |
 | V3 路线图（设计参考） | [docs/AI-GUI-MCP-ROADMAP-v3.md](docs/AI-GUI-MCP-ROADMAP-v3.md) |
 | 开发环境及规约 | [openspec/config.yaml](openspec/config.yaml) |
 
@@ -67,6 +68,7 @@ ai-gui-mcp/
 │   ├── PHASE2-SPIKE.md
 │   ├── PHASE2-SPIKE-RESULTS.md
 │   ├── PHASE2-IMPLEMENTATION.md
+│   ├── PHASE3A-DRAFT.md
 │   ├── FUTURE-REFERENCE.md
 │   ├── P1-potential-issue.md
 │   ├── P2-potential-issue.md

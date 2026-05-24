@@ -28,6 +28,22 @@
 - 云端 VLM 作为复杂场景的降级
 - ⚠️ v2 审阅指出：原「UI-TARS-7B, ScreenSpot Pro 61.6%」数字有误，7B 模型不可能超 72B 版本，且该基准当时最强方法 ~48%。选型时按当时 leaderboard 现查，不依赖本文档数字。
 
+### 感知抽象（P3A，2026-05-24 讨论结论）
+
+- **不引入第二个“看”入口**：不要让 `screen` + `see` 并存。继续保持 `screen` 作为单一读侧入口。
+- **统一点在 provider/result 层，不在 tool 命名层**：`screenshot` / `accessibility` / `vision` 都只是 perception provider。
+- **顶层接口按语义分层**：
+  - state query：`screen(size)` / `screen(cursor)`
+  - perception query：`screen(snapshot)` / `screen(analyze)` / `screen(image)`
+- **P3A 主目标**：先做 GUI parser（结构化元素 + 布局摘要），不是先做语义点击。
+- **Observation 语义**：
+  - `snapshot` 创建 observation handle
+  - `analyze` 是 snapshot 的派生结果
+  - `image` 按需返回 raw payload
+- **缓存/历史策略**：session-scoped 语义；初版允许退化为当前 MCP 进程内默认 session；只保留短期内存历史，采用 `N + TTL + memory budget` 联合淘汰。
+- **P3A 非目标**：diff、region 局部分析、analyze profile、semantic click、长期持久化、复杂 agent planning。
+- 详见：[PHASE3A-DRAFT.md](PHASE3A-DRAFT.md)
+
 ### 无障碍树范围（Phase 2）
 
 AT-SPI2 覆盖范围：
@@ -80,6 +96,8 @@ grim+slurp / wlr-screencopy：
 |---|------|
 | 7 | 默认策略：本地模型优先 vs API 优先 |
 | 8 | 本地模型具体选型与部署方式 |
+| 9 | `AnalysisResult` 与现有 `ScreenSnapshot` 的兼容演进方式 |
+| 10 | `element.type` / `region.type` / `warning.code` 第一版受控枚举 |
 
 ### Phase 4+ 需确认
 
