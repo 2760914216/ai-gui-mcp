@@ -23,7 +23,7 @@
 
 ## 当前阶段
 
-→ [docs/SPIKE-RESULTS.md](SPIKE-RESULTS.md) — P0 验证结论
+→ [docs/PHASE0-SPIKE-RESULTS.md](PHASE0-SPIKE-RESULTS.md) — P0 验证结论
 → [docs/PHASE1-IMPLEMENTATION.md](PHASE1-IMPLEMENTATION.md) — P1 开发参考
 → [docs/P1-potential-issue.md](P1-potential-issue.md) — P1 实测问题与修复状态
 

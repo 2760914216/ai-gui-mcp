@@ -326,5 +326,5 @@ dev = ["pytest>=8.0.0"]
 
 ---
 
-> **依赖**：Phase 0 Spike 结论（已通过，见 SPIKE-RESULTS.md）。  
+> **依赖**：Phase 0 Spike 结论（已通过，见 PHASE0-SPIKE-RESULTS.md）。  
 > **状态**：✅ P1 已完成。

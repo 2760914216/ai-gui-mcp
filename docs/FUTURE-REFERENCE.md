@@ -96,7 +96,7 @@ grim+slurp / wlr-screencopy：
 |------|------|
 | a. 本地模型能力够吗？→ 够处理 80% 常见 GUI，复杂场景需云端降级 | ✅ 已讨论 |
 | b. PipeWire vs grim 各有什么优缺点？→ 见上方截图方案 | ✅ 已讨论 |
-| c. 无障碍树范围多大？是否之外就得用模型？→ 上限 70-80%（Windows UIA 口径），Linux AT-SPI2 在 COSMIC 实测仅 ~5%（见 SPIKE-RESULTS.md）。视觉层需承担 ~95% 感知工作 | ✅ 已讨论 |
+| c. 无障碍树范围多大？是否之外就得用模型？→ 上限 70-80%（Windows UIA 口径），Linux AT-SPI2 在 COSMIC 实测仅 ~5%（见 PHASE0-SPIKE-RESULTS.md）。视觉层需承担 ~95% 感知工作 | ✅ 已讨论 |
 | d. Claude Computer Use 是否 macOS 专用？→ 否，Linux 可用（Docker+X11 参考实现） | ✅ 已讨论 |
 
 ## 技术参考

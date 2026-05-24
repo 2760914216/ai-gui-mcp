@@ -148,6 +148,10 @@ Color heuristic: (1042, 1119) confidence=0.30
 **P2 的 `screen_snapshot()` 中 `cursor` 字段标注 `source="tracked"`, `confidence="low"`。**
 光标视觉校准不可能（因截图不含光标）。移动校准方案可用：通过 `move_abs` 到已知位置，内部坐标追踪误差 ≤20px（Phase 0 验证）。
 
+### 人工审核意见
+**不做截图光标检测的核心原因是因为可能误判，而非截图光标不可见**
+但截图光标不可见是在 COMIC 上的**事实**
+
 ---
 
 ## 0.5 MCP 集成原型

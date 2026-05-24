@@ -210,7 +210,7 @@ xdg-desktop-portal 截图使用 D-Bus 异步协议：
 └──────────┘
 ```
 
-SPIKE-RESULTS.md 已确认：
+PHASE0-SPIKE-RESULTS.md 已确认：
 - `dbus-python` + GLib mainloop 可以正常工作
 - `interactive=false` 时无用户弹窗，生产级可用
 - 但需要 GLib mainloop 订阅异步 `Response` 信号
@@ -529,7 +529,7 @@ perception:
 ### 参考文档
 
 - [ROADMAP.md](ROADMAP.md) — Phase 2 概述
-- [SPIKE-RESULTS.md](SPIKE-RESULTS.md) — Phase 0 实测数据（AT-SPI2 覆盖率、截图可行性）
+- [PHASE0-SPIKE-RESULTS.md](PHASE0-SPIKE-RESULTS.md) — Phase 0 实测数据（AT-SPI2 覆盖率、截图可行性）
 - [FUTURE-REFERENCE.md](FUTURE-REFERENCE.md) — 待确认技术选型
-- [AI-GUI-MCP-ROADMAP-v2.md](AI-GUI-MCP-ROADMAP-v2.md) — P2 详细设计 + P3 并行建议
+- [AI-GUI-MCP-ROADMAP-v3.md](AI-GUI-MCP-ROADMAP-v3.md) — P2 详细设计 + P3 并行建议
 - [P1-potential-issue.md](P1-potential-issue.md) — P1 的问题记录（参考格式）

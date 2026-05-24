@@ -10,6 +10,7 @@
 - **跳过技术验证直接编码** — 动手前必须跑 Phase 0 Spike，实测 uinput/键盘/分辨率/AT-SPI2 在真实环境中的表现。
 - **sudo 盲用** — 遇到需要 sudo 的操作时，先考虑有无替代方案（如用户级权限、非 root 路径），将 sudo 需求与替代方案告知用户，由用户决断是否使用 sudo。
 - **Question 被 TODO hook 拦截** — 在 TODO 项未完成时直接向用户提问会被 hook 阻止。如需在任务中途向用户提问，使用 `question` 工具而非直接文字提问。
+- **跳过视觉验证直接推进计划** — Spike 验证中部分测试项需要用户人工视觉确认（如"观察鼠标是否移动"、"确认截图中光标是否可见"）。Agent 在未等待用户确认的情况下直接标记验证通过并推进到下一阶段。人工视觉验证项必须在 TODO 中保留 pending 状态，等待用户在 TODO 中标记完成后再推进。
 
 ## 项目规约
 
@@ -18,11 +19,14 @@
 | 总体规划 | [docs/ROADMAP.md](docs/ROADMAP.md) |
 | P0 技术验证 | [docs/PHASE0-SPIKE.md](docs/PHASE0-SPIKE.md) |
 | P1 实现计划 | [docs/PHASE1-IMPLEMENTATION.md](docs/PHASE1-IMPLEMENTATION.md) |
-| P0 验证结果 | [docs/SPIKE-RESULTS.md](docs/SPIKE-RESULTS.md) |
+| P0 验证结果 | [docs/PHASE0-SPIKE-RESULTS.md](docs/PHASE0-SPIKE-RESULTS.md) |
 | 跨 session 参考 | [docs/FUTURE-REFERENCE.md](docs/FUTURE-REFERENCE.md) |
 | P1 实测问题 | [docs/P1-potential-issue.md](docs/P1-potential-issue.md) |
 | P2 潜在问题分析 | [docs/P2-potential-issue.md](docs/P2-potential-issue.md) |
-| V2 路线图（参考） | [docs/AI-GUI-MCP-ROADMAP-v2.md](docs/AI-GUI-MCP-ROADMAP-v2.md)（V2 草稿，部分设计已覆盖，仅作参考） |
+| P2 技术验证 | [docs/PHASE2-SPIKE.md](docs/PHASE2-SPIKE.md) |
+| P2 验证结果 | [docs/PHASE2-SPIKE-RESULTS.md](docs/PHASE2-SPIKE-RESULTS.md) |
+| P2 实现计划 | [docs/PHASE2-IMPLEMENTATION.md](docs/PHASE2-IMPLEMENTATION.md) |
+| V3 路线图（设计参考） | [docs/AI-GUI-MCP-ROADMAP-v3.md](docs/AI-GUI-MCP-ROADMAP-v3.md) |
 | 开发环境及规约 | [openspec/config.yaml](openspec/config.yaml) |
 
 ### 技术栈（当前阶段）
@@ -58,11 +62,15 @@ ai-gui-mcp/
 ├── docs/                             ← 项目文档
 │   ├── ROADMAP.md
 │   ├── PHASE0-SPIKE.md
+│   ├── PHASE0-SPIKE-RESULTS.md
 │   ├── PHASE1-IMPLEMENTATION.md
-│   ├── SPIKE-RESULTS.md
+│   ├── PHASE2-SPIKE.md
+│   ├── PHASE2-SPIKE-RESULTS.md
+│   ├── PHASE2-IMPLEMENTATION.md
 │   ├── FUTURE-REFERENCE.md
 │   ├── P1-potential-issue.md
-│   └── AI-GUI-MCP-ROADMAP-v2.md
+│   ├── P2-potential-issue.md
+│   └── AI-GUI-MCP-ROADMAP-v3.md
 ├── src/                              ← 源代码
 │   ├── __init__.py
 │   ├── server.py
