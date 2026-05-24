@@ -4,17 +4,31 @@
 
 **REMOVED** — Replaced by new snapshot semantics.
 
+This requirement SHALL be removed from the main spec.
+
 **Reason**: P3A redefines `screen(action="snapshot")` as a lightweight observation handle. The raw screenshot is no longer returned by default; it is accessed via `screen(action="image", snapshot_id)`. Structured analysis is accessed via `screen(action="analyze", snapshot_id?)`.
 
 **Migration**: Callers of `screen(action="snapshot")` that depended on `screenshot` (base64) being in the response must now use two calls: `snapshot` (to get `snapshot_id`) then `image` (to get the raw image). Callers that depended on `elements` must use `analyze` instead.
+
+#### Scenario: Requirement removed from main spec
+
+- **WHEN** the P3A intelligence layer change is applied
+- **THEN** the main screen-snapshot-semantics spec SHALL NOT require snapshot to return base64 screenshot
 
 ### Requirement: screen_snapshot response includes source field
 
 **REMOVED** — Replaced by artifact-level provenance.
 
+This requirement SHALL be removed from the main spec.
+
 **Reason**: With provider fusion (screenshot + OCR + vision + accessibility hints possibly all contributing to a single analysis), a single top-level `source` field cannot accurately represent the data provenance. The `source` field is removed from the public API.
 
 **Migration**: The internal `ScreenSnapshot.source` field is retained for provider-level tracking. Public consumers should rely on `SnapshotResult.note` for capture-level metadata and `AnalysisResult.warnings` for quality signals.
+
+#### Scenario: Requirement removed from main spec
+
+- **WHEN** the P3A intelligence layer change is applied
+- **THEN** the main screen-snapshot-semantics spec SHALL NOT include a source field in snapshot response
 
 ### Requirement: Accessibility tree is best-effort only
 

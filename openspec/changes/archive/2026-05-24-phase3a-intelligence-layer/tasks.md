@@ -42,7 +42,7 @@
 - [x] 4.6 Update `_handle_screen()` routing: add `analyze` and `image` branches alongside existing `size`/`cursor`/`snapshot`
 - [x] 4.7 Update `list_tools()` screen tool inputSchema: action enum to `["size","cursor","snapshot","analyze","image"]`, add optional `snapshot_id` parameter for `analyze`, required `snapshot_id` for `image`
 - [x] 4.8 Remove `_build_error_snapshot()` — error handling moves to PerceptionService
-- [ ] 4.9 Add integration tests: server screen(size/cursor) unchanged, snapshot returns handle (no screenshot field), image returns base64 payload, analyze returns analysis result structure, batch with new screen actions
+- [x] 4.9 Add integration tests: server screen(size/cursor) unchanged, snapshot returns handle (no screenshot field), image returns base64 payload, analyze returns analysis result structure, batch with new screen actions
 
 ## 5. Provider Abstraction (Screenshot + Accessibility)
 
@@ -62,7 +62,7 @@
 - [x] 6.2 Create `DummyVisionProvider(VisionProvider)` stub — returns `AnalysisResult` with `overall_quality="low"`, empty elements, `image_unavailable` warning (used before real model integration)
 - [x] 6.3 Wire `VisionProvider` into `PerceptionService.__init__()` (optional, defaults to `DummyVisionProvider`)
 - [x] 6.4 Update `PerceptionService.analyze()` to call `VisionProvider.parse()` instead of returning placeholder directly
-- [ ] 6.5 Create P3A Spike acceptance test set: 10-15 COSMIC screenshots covering IDE, browser, settings, file manager, dialog scenarios
+- [x] 6.5 Create P3A Spike acceptance test set: 10-15 COSMIC screenshots covering IDE, browser, settings, file manager, dialog scenarios
 - [x] 6.6 Document P3A Spike plan in `docs/PHASE3A-SPIKE.md`: candidate models (OmniParser v2, UI-TARS, cloud VLM), evaluation metrics (element recall/precision, region classification accuracy, latency ceiling), go/no-go criteria per spec `gui-parser-result`
 
 ## 7. Configuration
@@ -90,4 +90,4 @@
 - [x] 9.2 Update `AGENTS.md` — add P3A change path and relevant docs
 - [x] 9.3 Update `docs/FUTURE-REFERENCE.md` — move P3A open questions from "pending" to "decided" where resolved by this change
 - [x] 9.4 Create `docs/PHASE3A-SPIKE.md` — spike plan per task 6.6 (if not already created there)
-- [ ] 9.5 Archive this change after all tasks complete and verification passes
+- [x] 9.5 Archive this change after all tasks complete and verification passes
