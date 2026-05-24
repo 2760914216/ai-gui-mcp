@@ -1,32 +1,65 @@
-## ADDED Requirements
+## Requirements
+
+### Requirement: SnapshotResult as public snapshot contract
+
+The system SHALL define a `SnapshotResult` pydantic model that replaces `ScreenSnapshot` as the return type for `screen(action="snapshot")`.
+
+#### Scenario: SnapshotResult is a lightweight handle
+
+- **WHEN** `screen(action="snapshot")` is called
+- **THEN** the response SHALL be a `SnapshotResult` containing `snapshot_id`, `created_at`, `screen` (ScreenState), `has_image`, `image_format`, and `note`
+- **AND** the response SHALL NOT contain a `screenshot` base64 field
+- **AND** the response SHALL NOT contain an `elements` field
+- **AND** the response SHALL NOT contain a `source` field
+
+#### Scenario: SnapshotResult when capture succeeds
+
+- **WHEN** screenshot capture succeeds
+- **THEN** `has_image` SHALL be `true`
+- **AND** `image_format` SHALL indicate the image MIME type (e.g., `"png"`)
+
+#### Scenario: SnapshotResult when capture fails
+
+- **WHEN** screenshot capture fails (portal unavailable, timeout, permission error)
+- **THEN** `has_image` SHALL be `false`
+- **AND** `note` SHALL contain a descriptive error message
 
 ### Requirement: ScreenSnapshot output model
 
-The system SHALL define a `ScreenSnapshot` pydantic model as the unified return type for all `ScreenBackend.capture()` implementations.
+The `ScreenSnapshot` pydantic model SHALL be reclassified as an internal model used between `PerceptionService` and providers. It SHALL NOT be the public return type of `screen(action="snapshot")`.
 
-#### Scenario: ScreenSnapshot structure
+#### Scenario: ScreenSnapshot is internal only
 
-- **WHEN** any `ScreenBackend.capture()` is called
-- **THEN** the returned `ScreenSnapshot` SHALL contain: `screen` (width/height), `cursor` (x/y/source), `screenshot` (base64 PNG string or null), `elements` (list of UIElement), and `source` (one of "screenshot", "accessibility", "vision")
+- **WHEN** `ScreenSnapshot` is used
+- **THEN** it SHALL only appear in provider-level and `PerceptionService` internal logic
+- **AND** it SHALL NOT be serialized as an MCP tool response directly
 
-#### Scenario: source field indicates perception origin
+#### Scenario: ScreenSnapshot retains existing structure
+
+- **WHEN** any `ScreenBackend.capture()` is called (during transition)
+- **THEN** the returned `ScreenSnapshot` SHALL still contain: `screen` (width/height), `cursor` (x/y/source), `screenshot` (base64 PNG string or null), `elements` (list of UIElement), `source` (one of "screenshot","accessibility","vision"), and `note`
+
+#### Scenario: source field indicates perception origin (internal use)
 
 - **WHEN** `source` is `"screenshot"` (bare capture, no element recognition)
 - **THEN** `elements` MUST be an empty array
-- **WHEN** `source` is `"accessibility"` (elements from AT-SPI2/UIA/AX tree)
-- **THEN** `elements` MAY contain UIElement entries with `confidence=null` (inherently certain)
 - **WHEN** `source` is `"vision"` (elements from visual recognition model)
 - **THEN** `elements` MAY contain UIElement entries with a numeric `confidence` value (0.0-1.0)
 
 ### Requirement: UIElement model for structured GUI elements
 
-The system SHALL define a `UIElement` pydantic model representing a single GUI element discovered via accessibility tree or visual recognition.
+The existing `UIElement` SHALL be retained as an internal/perception model. The new `ParsedElement` (defined in `gui-parser-result`) SHALL be the public-facing element model for `AnalysisResult`.
 
-#### Scenario: UIElement fields
+#### Scenario: UIElement continues to serve internal providers
 
-- **WHEN** a `UIElement` is created
-- **THEN** it SHALL have an `id` field (string, unique within the snapshot)
-- **AND** it SHALL have optional fields: `role` (string, e.g. "push_button"), `name` (string, display text), `bbox` (list of 4 ints [x, y, w, h]), `states` (list of strings), `parent` (string, parent element id), `confidence` (float or None)
+- **WHEN** a provider (accessibility or vision) discovers elements
+- **THEN** it MAY use `UIElement` as an internal representation
+- **AND** `PerceptionService` SHALL convert `UIElement` to `ParsedElement` for public output
+
+#### Scenario: ParsedElement replaces UIElement in public API
+
+- **WHEN** `AnalysisResult.elements` is populated
+- **THEN** each element SHALL be a `ParsedElement` with fields: `id`, `type` (controlled enum), `bbox`, `text`, `description`, `confidence`, `parent_id`, `children_ids`, `region_ref`
 
 #### Scenario: Minimum viable UIElement
 
@@ -35,14 +68,17 @@ The system SHALL define a `UIElement` pydantic model representing a single GUI e
 
 ### Requirement: CursorInfo model with source tracking
 
-The system SHALL define a `CursorInfo` pydantic model representing the cursor position and its detection method.
+The `CursorInfo` model SHALL continue to be used internally. The public `ScreenState` model SHALL expose cursor fields directly instead of wrapping a separate `CursorInfo` object.
 
-#### Scenario: CursorInfo structure
+#### Scenario: CursorInfo remains internal
 
-- **WHEN** cursor position is reported in a `ScreenSnapshot`
-- **THEN** the `CursorInfo` SHALL contain: `x` (int), `y` (int), `source` (Literal["tracked", "detected"])
-- **AND** `source="tracked"` indicates internal coordinate tracking (uinput accumulation)
-- **AND** `source="detected"` indicates visual detection from screenshot (reserved for P3)
+- **WHEN** cursor position is tracked or detected
+- **THEN** `CursorInfo` SHALL be used internally with fields: `x`, `y`, `source` (Literal["tracked","detected"])
+
+#### Scenario: ScreenState exposes cursor in public API
+
+- **WHEN** `screen(action="cursor")` is called
+- **THEN** the response SHALL be a `ScreenState` with `cursor_x`, `cursor_y`, and `cursor_source` fields (not a nested `CursorInfo` object)
 
 #### Scenario: Default source on COSMIC/Wayland
 
