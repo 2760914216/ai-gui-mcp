@@ -491,7 +491,7 @@ dependencies = [
 - [ ] 2.3 光标可见性验证
 - [ ] 2.4 文件安全验证
 - [ ] 2.5 AT-SPI2 API 验证
-- [ ] 产出 [P2-SPIKE.md](P2-SPIKE.md) 结论
+- [x] 产出 [PHASE2-SPIKE-RESULTS.md](PHASE2-SPIKE-RESULTS.md) 结论
 
 ### Step 1 — 截图后端骨架
 

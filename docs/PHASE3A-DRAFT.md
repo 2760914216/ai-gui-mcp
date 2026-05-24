@@ -240,6 +240,20 @@ P3A 主结果应更像 **parser result**，而不是 report。
 }
 ```
 
+### 6.3 为什么 bbox 必须存在：Reference Gap 论证
+
+P3A 输出 `ParsedElement.bbox` 不是「给 AI 提供一个可选的坐标提示」，而是消除 AI 推理歧义的**必要条件**。
+
+DeepSeek 2026-04 的「Thinking with Visual Primitives」论文指出：当前 VLM 面临的核心瓶颈不是「看不清」（Perception Gap），而是 **Reference Gap**——自然语言在密集空间布局中过于模糊，导致推理链中出现逻辑崩溃和幻觉。
+
+> 自然语言无法精确指代「左边第三个按钮」「搜索框下方那个下拉菜单」。
+
+模型学会在推理过程中交错插入空间标记（点、bbox）作为「最小思维单元」后，在空间推理基准上达到 GPT-5.4 / Claude-Sonnet-4.6 / Gemini-3-Flash 同等水平，且视觉 token 消耗显著更低。
+
+**对 P3A 的推论**：`ParsedElement.bbox` 不是「额外信息」，它是 AI 消费 GUI 理解结果时消除 Reference Gap 的**唯一锚点**。这也是为什么 element 模型设计为 `{bbox, type, text}` 三元组——bbox 提供空间锚定，type/text 提供语义标签，二者缺一不可。
+
+> 来源: [Thinking with Visual Primitives](https://github.com/mitkox/Thinking-with-Visual-Primitives) (DeepSeek, 2026-04)
+
 ---
 
 ## 7. P3A 的解析粒度

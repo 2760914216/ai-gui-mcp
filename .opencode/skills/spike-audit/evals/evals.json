@@ -1,0 +1,23 @@
+{
+  "skill_name": "spike-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我审核一下 docs/PHASE3A-SPIKE.md，看看里面引用的版本号、benchmark 数据和 ranking 声称有没有过时或错误的。重点看那些排名声称，有没有已经被新模型超越的。输出审核报告。",
+      "expected_output": "一份结构化的 Markdown 审核报告，包含时效性检查（版本是否过时、排名是否被超越）和真实性检查（benchmark 数据是否准确）的结果，按严重程度分类，每个发现附多来源证据。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我刚写完一份新的 spike 方案，但里面的技术数据都是之前搜的，帮我做下审核，看看有没有什么已经过时的——比如引用的库是不是已经有新版本了，benchmark 数据还准不准。文件在 docs/PHASE3A-DRAFT.md",
+      "expected_output": "审核报告覆盖版本号时效性（检查最新 release）、benchmark 数据真实性（交叉验证），如果文档较短或无大量外部数据则适当简化，并在报告中说明简化原因。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "docs/PHASE2-SPIKE.md 这份文档写很久了，帮我检查一下里面提到的技术方案（dbus-next、pyatspi、xdg-desktop-portal）有没有发生 API 变更或者有更好的替代方案出现。另外看看那些判定标准还合不合理。",
+      "expected_output": "审核报告重点关注 API 变更（deprecation、breaking change）、替代方案的出现，以及判定标准在当前技术生态下是否仍然合理。对主观判断（判定标准是否合理）给提示而非硬结论。",
+      "files": []
+    }
+  ]
+}

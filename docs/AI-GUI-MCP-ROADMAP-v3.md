@@ -72,7 +72,7 @@ P3（规划）: 截图 → 视觉模型 (OmniParser/SoM) → 结构化元素
 | **0. Spike** | uinput/键盘/坐标/AT-SPI2/截图 可行性验证 | ✅ | [PHASE0-SPIKE.md](PHASE0-SPIKE.md) → [PHASE0-SPIKE-RESULTS.md](PHASE0-SPIKE-RESULTS.md) |
 | **1. Action** | MCP server + 鼠标键盘模拟 (uinput) | ✅ | [PHASE1-IMPLEMENTATION.md](PHASE1-IMPLEMENTATION.md) |
 | **2. Perception** | 截图采集 (xdg-desktop-portal) + 坐标置信度 | ✅ | [PHASE2-SPIKE.md](PHASE2-SPIKE.md) → [PHASE2-SPIKE-RESULTS.md](PHASE2-SPIKE-RESULTS.md) → [PHASE2-IMPLEMENTATION.md](PHASE2-IMPLEMENTATION.md) |
-| **3. Intelligence** | 视觉识别 + SoM 标注 + 语义点击 | 规划中 | — |
+| **3. Intelligence** | 视觉识别 + SoM 标注 + 语义点击 | 进行中 | — |
 | **4. Human-like** | 类人交互（贝塞尔轨迹、打字间隔等） | 规划中 | — |
 | **5. Multi-platform** | Windows + macOS 后端 | 远期 | — |
 | **6. Polish** | 安全、性能、录制回放 | 远期 | — |

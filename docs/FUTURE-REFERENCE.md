@@ -97,6 +97,7 @@ grim+slurp / wlr-screencopy：
 > - #8 本地模型选型 → 留待 P3A Spike 实测 OmniParser v2、UI-TARS、云 VLM 后确定
 > - #9 `AnalysisResult` 兼容演进 → 采用三层公开模型（SnapshotResult / AnalysisResult / ScreenState），`ScreenSnapshot` 降级为内部模型
 > - #10 受控枚举 → 第一版 element.type（17 值）、region.type（10 值）、warning.code（7 值）已冻结
+> - #13 视觉 token 压缩 → 「Thinking with Visual Primities」(DeepSeek, 2026-04) 的 KV cache 4→1 压缩技术，未来处理 4K+ 高分辨率截图时的性能优化方向；Reference Gap 概念可作为 P3A 设计 bbox 输出的理论支撑
 
 ### Phase 4+ 需确认
 
