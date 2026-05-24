@@ -12,10 +12,14 @@ from mcp.types import Tool, TextContent
 
 from src.config import load_config, _deep_get
 from src.backends.uinput import UInputBackend
-from src.models import MouseAction, KeyboardAction, ScreenAction, BatchRequest, CursorInfo
+from src.models import (
+    MouseAction, KeyboardAction, ScreenAction, BatchRequest,
+    ScreenState, SnapshotResult, AnalysisResult,
+)
 
 _backend = None
 _screen_backend = None
+_perception_service = None
 app = Server("ai-gui-mcp")
 
 
@@ -39,6 +43,17 @@ def get_screen_backend():
     if _screen_backend is None:
         raise RuntimeError("Screen backend not initialized. Call set_screen_backend() first.")
     return _screen_backend
+
+
+def set_perception_service(service):
+    global _perception_service
+    _perception_service = service
+
+
+def get_perception_service():
+    if _perception_service is None:
+        raise RuntimeError("PerceptionService not initialized. Call set_perception_service() first.")
+    return _perception_service
 
 
 def _create_backend(config: dict):
@@ -114,14 +129,18 @@ async def list_tools():
         ),
         Tool(
             name="screen",
-            description="Get screen information (size, cursor position, snapshot)",
+            description="Get screen information (size, cursor position, snapshot, analyze, image)",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "action": {
                         "type": "string",
-                        "enum": ["size", "cursor", "snapshot"],
-                        "description": "Screen operation: size (resolution), cursor (tracked position), snapshot (full-screen capture as base64 PNG)",
+                        "enum": ["size", "cursor", "snapshot", "analyze", "image"],
+                        "description": "Screen operation: size (resolution), cursor (tracked position), snapshot (observation handle), analyze (structured GUI understanding), image (raw base64 PNG on demand)",
+                    },
+                    "snapshot_id": {
+                        "type": "string",
+                        "description": "Snapshot identifier — optional for analyze, required for image",
                     },
                 },
                 "required": ["action"],
@@ -270,48 +289,44 @@ def _handle_keyboard(action: KeyboardAction) -> str:
 def _handle_screen(action: ScreenAction) -> str:
     import json
     backend = get_backend()
+
     if action.action == "size":
         w, h = backend.screen_size()
-        return json.dumps({"width": w, "height": h})
+        state = ScreenState(width=w, height=h)
+        return state.model_dump_json()
+
     elif action.action == "cursor":
         x, y = backend.get_cursor_position()
-        return json.dumps({"x": x, "y": y})
+        state = ScreenState(cursor_x=x, cursor_y=y, cursor_source="tracked")
+        return state.model_dump_json()
+
     elif action.action == "snapshot":
-        return _handle_screen_snapshot(backend, get_screen_backend())
+        service = get_perception_service()
+        result = service.snapshot()
+        return result.model_dump_json()
+
+    elif action.action == "analyze":
+        service = get_perception_service()
+        result = service.analyze()
+        return result.model_dump_json()
+
+    elif action.action == "image":
+        raise ValueError("screen image action requires 'snapshot_id' parameter")
+
+    return json.dumps({"error": f"Unknown screen action: {action.action}"})
 
 
-def _handle_screen_snapshot(input_backend, screen_backend) -> str:
-    import time
-
-    t_start = time.perf_counter()
-
-    try:
-        snapshot = screen_backend.capture()
-    except Exception as e:
-        return _build_error_snapshot(input_backend, str(e))
-
-    cursor_x, cursor_y = input_backend.get_cursor_position()
-    snapshot.cursor = CursorInfo(x=cursor_x, y=cursor_y, source="tracked")
-
-    latency_ms = (time.perf_counter() - t_start) * 1000
-    if snapshot.note is None:
-        snapshot.note = f"snapshot captured via xdg-desktop-portal; latency={latency_ms:.0f}ms"
-
-    return snapshot.model_dump_json(exclude_none=False)
+def _handle_screen_analyze(snapshot_id: str | None = None) -> str:
+    service = get_perception_service()
+    result = service.analyze(snapshot_id=snapshot_id)
+    return result.model_dump_json()
 
 
-def _build_error_snapshot(input_backend, error: str) -> str:
+def _handle_screen_image(snapshot_id: str) -> str:
     import json
-    w, h = input_backend.screen_size()
-    cx, cy = input_backend.get_cursor_position()
-    return json.dumps({
-        "screen": {"width": w, "height": h},
-        "cursor": {"x": cx, "y": cy, "source": "tracked"},
-        "screenshot": None,
-        "elements": [],
-        "source": "screenshot",
-        "note": f"screenshot unavailable: {error}",
-    }, ensure_ascii=False)
+    service = get_perception_service()
+    payload = service.image(snapshot_id)
+    return json.dumps(payload, ensure_ascii=False)
 
 
 def _handle_batch(request: BatchRequest) -> str:
@@ -329,7 +344,16 @@ def _handle_batch(request: BatchRequest) -> str:
                 result = _handle_keyboard(keyboard_action)
             elif item.tool == "screen":
                 screen_action = ScreenAction(**item.args)
-                result = _handle_screen(screen_action)
+                if screen_action.action == "analyze":
+                    snapshot_id = item.args.get("snapshot_id")
+                    result = _handle_screen_analyze(snapshot_id)
+                elif screen_action.action == "image":
+                    snapshot_id = item.args.get("snapshot_id")
+                    if not snapshot_id:
+                        raise ValueError("screen image action requires 'snapshot_id'")
+                    result = _handle_screen_image(snapshot_id)
+                else:
+                    result = _handle_screen(screen_action)
             results.append(result)
             completed += 1
         except Exception as e:
@@ -359,7 +383,15 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
             result = _handle_keyboard(action)
         elif name == "screen":
             action = ScreenAction(**arguments)
-            result = _handle_screen(action)
+            if action.action == "analyze":
+                result = _handle_screen_analyze(arguments.get("snapshot_id"))
+            elif action.action == "image":
+                snapshot_id = arguments.get("snapshot_id")
+                if not snapshot_id:
+                    raise ValueError("screen image action requires 'snapshot_id'")
+                result = _handle_screen_image(snapshot_id)
+            else:
+                result = _handle_screen(action)
         elif name == "batch":
             request = BatchRequest(**arguments)
             result = _handle_batch(request)
@@ -379,6 +411,29 @@ async def main():
     set_backend(backend)
     screen_backend = _create_screen_backend(config)
     set_screen_backend(screen_backend)
+
+    # Initialize P3A PerceptionService
+    from src.stores.observation import ObservationStore
+    from src.services.perception import PerceptionService
+    from src.providers.screenshot import PortalScreenshotProvider
+
+    max_count = _deep_get(config, "perception.service.snapshot_max_count", 16)
+    ttl_sec = _deep_get(config, "perception.service.snapshot_ttl_sec", 300)
+    mem_mb = _deep_get(config, "perception.service.snapshot_memory_budget_mb", 256)
+
+    store = ObservationStore(
+        max_count=max_count,
+        ttl_sec=ttl_sec,
+        memory_budget_mb=mem_mb,
+    )
+    screenshot_provider = PortalScreenshotProvider(screen_backend)
+    perception = PerceptionService(
+        input_backend=backend,
+        screenshot_provider=screenshot_provider,
+        observation_store=store,
+    )
+    set_perception_service(perception)
+
     # Log detected vs configured resolution
     w, h = backend.screen_size()
     config_w = _deep_get(config, "screen.width")

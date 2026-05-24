@@ -16,6 +16,17 @@ perception:
   screenshot:
     method: xdg-desktop-portal
     timeout_ms: 10000
+  service:
+    snapshot_max_count: 16
+    snapshot_ttl_sec: 300
+    snapshot_memory_budget_mb: 256
+  providers:
+    screenshot:
+      backend: "xdg-desktop-portal"
+    accessibility:
+      enabled: true
+    vision:
+      backend: "dummy"
 
 behavior:
   profile: "none"

@@ -9,7 +9,7 @@
 | **0. Spike** | 技术栈验证（uinput/键盘/坐标/AT-SPI2/截图） | ✅ 已完成 |
 | **1. Action Layer** | MCP server + 鼠标键盘模拟 | ✅ 已完成 |
 | **2. Perception** | 截图 + 无障碍树 | 进行中 |
-| **3. Intelligence** | 视觉识别 + SoM 标注 | 规划中 |
+| **3A. Intelligence Layer** | PerceptionService + provider 抽象 + GUI parser | 进行中 |
 | **4. Human-like** | 类人交互（贝塞尔轨迹等） | 规划中 |
 | **5. Multi-platform** | Windows + macOS | 远期 |
 | **6. Polish** | 安全、性能、录制回放 | 远期 |
@@ -29,5 +29,7 @@
 
 ## 后续阶段参考
 
+→ [docs/PHASE3A-SPIKE.md](PHASE3A-SPIKE.md) — P3A 模型选型 Spike 计划
+→ [openspec/changes/phase3a-intelligence-layer/](../openspec/changes/phase3a-intelligence-layer/) — P3A 变更 artifacts
 → [docs/P2-potential-issue.md](P2-potential-issue.md) — P2 潜在问题分析
 → [docs/FUTURE-REFERENCE.md](FUTURE-REFERENCE.md)（跨 session 讨论记录）

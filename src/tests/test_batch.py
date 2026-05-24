@@ -100,8 +100,8 @@ class TestBatchCursor:
         assert data["total"] == 2
         assert "results" in data
         cursor_result = json.loads(data["results"][1])
-        assert cursor_result["x"] == 100
-        assert cursor_result["y"] == 200
+        assert cursor_result["cursor_x"] == 100
+        assert cursor_result["cursor_y"] == 200
 
 
 class TestBatchResultsArray:
@@ -124,8 +124,8 @@ class TestBatchResultsArray:
         assert "height" in size_result
         assert "moved to" in data["results"][1]
         cursor_result = json.loads(data["results"][2])
-        assert cursor_result["x"] == 50
-        assert cursor_result["y"] == 60
+        assert cursor_result["cursor_x"] == 50
+        assert cursor_result["cursor_y"] == 60
 
 
 class TestBatchEmpty:

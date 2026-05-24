@@ -27,6 +27,7 @@
 | P2 验证结果 | [docs/PHASE2-SPIKE-RESULTS.md](docs/PHASE2-SPIKE-RESULTS.md) |
 | P2 实现计划 | [docs/PHASE2-IMPLEMENTATION.md](docs/PHASE2-IMPLEMENTATION.md) |
 | P3A 讨论草案 | [docs/PHASE3A-DRAFT.md](docs/PHASE3A-DRAFT.md) |
+| P3A 实现计划 | [openspec/changes/phase3a-intelligence-layer/](openspec/changes/phase3a-intelligence-layer/) |
 | V3 路线图（设计参考） | [docs/AI-GUI-MCP-ROADMAP-v3.md](docs/AI-GUI-MCP-ROADMAP-v3.md) |
 | 开发环境及规约 | [openspec/config.yaml](openspec/config.yaml) |
 
@@ -44,7 +45,7 @@
 
 - **后端可替换** — P1 即建 `InputBackend` 抽象接口（`src/backends/base.py`），当前仅 uinput 实现。
 - **最小工具面** — 4 个 tool：mouse / keyboard / screen / batch，通过 action 参数区分操作。
-- **分层解耦** — Action → Perception → Intelligence 三层独立演进，当前 P1 只做 Action。
+- **分层解耦** — Action → Perception → Intelligence 三层独立演进，当前 P3A 建设 Intelligence Layer。
 - **先验证再编码** — Phase 0 Spike 先过，再写代码。
 
 ### 目录树
@@ -84,10 +85,26 @@ ai-gui-mcp/
 │   │   ├── uinput.py
 │   │   ├── portal.py
 │   │   └── screen.py
+│   ├── providers/
+│   │   ├── __init__.py
+│   │   ├── screenshot.py
+│   │   ├── a11y.py
+│   │   └── vision.py
+│   ├── services/
+│   │   ├── __init__.py
+│   │   └── perception.py
+│   ├── stores/
+│   │   ├── __init__.py
+│   │   └── observation.py
 │   └── tests/
 │       ├── test_mouse.py
 │       ├── test_keyboard.py
-│       └── test_batch.py
+│       ├── test_batch.py
+│       ├── test_perception.py
+│       ├── test_models_p3a.py
+│       ├── test_observation_store.py
+│       ├── test_perception_service.py
+│       └── test_providers.py
 ├── ignore_draft/                     ← 忽略，草稿和临时笔记
 │   ├── overview.md
 │   ├── Suggestions-For-ROADMAP.md

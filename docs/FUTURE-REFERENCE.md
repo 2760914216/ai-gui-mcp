@@ -92,12 +92,11 @@ grim+slurp / wlr-screencopy：
 
 ### Phase 3 需确认
 
-| # | 事项 |
-|---|------|
-| 7 | 默认策略：本地模型优先 vs API 优先 |
-| 8 | 本地模型具体选型与部署方式 |
-| 9 | `AnalysisResult` 与现有 `ScreenSnapshot` 的兼容演进方式 |
-| 10 | `element.type` / `region.type` / `warning.code` 第一版受控枚举 |
+> P3A 核心议题已通过 [openspec/changes/phase3a-intelligence-layer/](../openspec/changes/phase3a-intelligence-layer/) 决议：
+> - #7 默认策略 → 采用 provider 抽象，支持本地/云端模型切换（P3A-4 Spike 选型）
+> - #8 本地模型选型 → 留待 P3A Spike 实测 OmniParser v2、UI-TARS、云 VLM 后确定
+> - #9 `AnalysisResult` 兼容演进 → 采用三层公开模型（SnapshotResult / AnalysisResult / ScreenState），`ScreenSnapshot` 降级为内部模型
+> - #10 受控枚举 → 第一版 element.type（17 值）、region.type（10 值）、warning.code（7 值）已冻结
 
 ### Phase 4+ 需确认
 
