@@ -2,7 +2,7 @@
 
 > **V3 说明**：基于 V2 的技术修正重写。V2 中已被实际实现覆盖的假设（X11 demo、附录 A 代码骨架等）不再保留。本文档为项目权威架构参考，随实际进展更新。
 >
-> 与活跃文档的关系：阶段状态见 [ROADMAP.md](ROADMAP.md)；跨 session 决策记录见 [FUTURE-REFERENCE.md](FUTURE-REFERENCE.md)。
+> 与活跃文档的关系：阶段状态见下文分阶段路线图；跨 session 决策记录见 [FUTURE-REFERENCE.md](FUTURE-REFERENCE.md)。
 
 ---
 
@@ -157,7 +157,7 @@ V1 称差分区域「快约 3 倍」——这是把 input token 数与推理 wal
 
 | 用途 | 文档 |
 |------|------|
-| 阶段状态追踪 | [ROADMAP.md](ROADMAP.md) |
+| 阶段状态追踪 | 本文件 |
 | P0 Spike 计划 | [PHASE0-SPIKE.md](PHASE0-SPIKE.md) |
 | P0 Spike 结果 | [PHASE0-SPIKE-RESULTS.md](PHASE0-SPIKE-RESULTS.md) |
 | P1 实现计划 | [PHASE1-IMPLEMENTATION.md](PHASE1-IMPLEMENTATION.md) |
@@ -166,6 +166,8 @@ V1 称差分区域「快约 3 倍」——这是把 input token 数与推理 wal
 | P2 Spike 结果 | [PHASE2-SPIKE-RESULTS.md](PHASE2-SPIKE-RESULTS.md) |
 | P2 实现计划 | [PHASE2-IMPLEMENTATION.md](PHASE2-IMPLEMENTATION.md) |
 | P3A 讨论草案 | [PHASE3A-DRAFT.md](PHASE3A-DRAFT.md) |
+| P3A Spike 计划 | [PHASE3A-SPIKE.md](PHASE3A-SPIKE.md) |
+| P3A Spike 结果 | [PHASE3A-SPIKE-RESULTS.md](PHASE3A-SPIKE-RESULTS.md) |
 | P2 潜在问题 | [P2-potential-issue.md](P2-potential-issue.md) |
 | 跨 session 决策 | [FUTURE-REFERENCE.md](FUTURE-REFERENCE.md) |
 | Agent 行为规约 | [../AGENTS.md](../AGENTS.md) |

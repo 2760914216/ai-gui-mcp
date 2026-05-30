@@ -13,6 +13,8 @@ build/
 .pytest_cache/
 .coverage
 htmlcov/
+docs/spike-results/
+docs/spike-screenshots/
 
 # IDE
 .vscode/

@@ -46,7 +46,11 @@
 
 ### 无障碍树范围（Phase 2）
 
-AT-SPI2 覆盖范围：
+> ⚠️ **2026-05-23 实测修正**：COSMIC Wayland 上 AT-SPI2 覆盖率为 **0%**（PHASE2-SPIKE-RESULTS）。COSMIC compositor/settings/panel、GTK/Qt/Electron 应用均不注册 AT-SPI2。P0 曾发现 WebKit 沙箱进程有注册（~5%），P2 重新验证时也已消失。
+>
+> 以下为 AT-SPI2 在其他 Linux 桌面环境（GNOME/KDE）上的理论覆盖范围，非本项目 COSMIC 实测数据：
+
+AT-SPI2 理论覆盖范围（GNOME/KDE 等传统桌面）：
 - ✅ GTK 应用（GNOME 全家桶）
 - ✅ Qt 应用（KDE 全家桶）
 - ✅ Java Swing/AWT
@@ -54,19 +58,19 @@ AT-SPI2 覆盖范围：
 - ⚠️ Electron 部分覆盖
 - ❌ 游戏、Wine/Proton、FLTK、自定义工具包
 
-⚠️ v2 审阅指出：原「覆盖率 70-80%」是 Windows UIA 口径。Linux AT-SPI2 实际覆盖可能显著更低，Qt 时好时坏、Electron 基本无树、Wayland 原生应用更糟。视觉层可能需要承担 40-60% 的实际工作。**Phase 0 需用目标应用实测确认。**
+> **对本项目的影响**：视觉路径是 Linux COSMIC 感知主力，P3 视觉模型优先级前移。AT-SPI2 仅作为 opportunistic 增强（不可用时静默降级）。
 
-### 截图方案（Phase 1-2）
+### 截图方案（Phase 2，已实现）
 
-PipeWire：
-- 优点：Wayland 标准，通过 xdg-desktop-portal 跨 compositor，<17ms 延迟
-- 缺点：需 portal 集成（有时不稳定），不兼容无 portal 的极简 compositor
+P2 实现方案：**xdg-desktop-portal + dbus-python**（非 PipeWire 直连）
 
-grim+slurp / wlr-screencopy：
-- 优点：极简，wlroots compositor 直接支持
-- 缺点：仅 wlroots 系（Sway, Hyprland, river），不通用
+- 调用 `org.freedesktop.portal.Desktop.Screenshot(interactive=false)`
+- D-Bus 库选 `dbus-python`（dbus-next 存在 introspection bug，不可用）
+- 线程桥接 GLib.MainLoop 监听异步 Response 信号
+- 实测延迟：~56ms avg（2560×1600 PNG）
+- 截图不含光标（COSMIC 硬件 overlay），坐标 1:1 映射
 
-→ Phase 1 先用 PipeWire + portal（最通用），后续按需加 wlr 方案。
+> P1 阶段未做截图（P1 仅有 mouse/keyboard/screen.size），P2 为截图实际实现阶段。
 
 ## 待讨论事项（按 Phase 分组）
 
@@ -74,25 +78,26 @@ grim+slurp / wlr-screencopy：
 
 > 所有 P1 议题已在 PHASE1-IMPLEMENTATION.md 中决定：鼠标坐标用内部追踪、Transport 用 stdio、工具面采用 action 参数设计。
 
-### Phase 2 需确认
+### Phase 2 已确认（✅ 2026-05-23 已完成）
 
-> 📄 详见 [P2-potential-issue.md](P2-potential-issue.md) — Phase 2 潜在问题完整分析（7 个问题 + 优先级 + 建议）
+> 📄 详见 [PHASE2-SPIKE-RESULTS.md](PHASE2-SPIKE-RESULTS.md) 和 [PHASE2-IMPLEMENTATION.md](PHASE2-IMPLEMENTATION.md)。
+> P2 已于 2026-05-23 完成所有 Spike 验证并实现截图采集层。以下为最终决策：
 
-| # | 事项 |
-|---|------|
-| 4 | 无障碍树库：`pyatspi2` vs `dasbus` |
-| 5 | 差分截图实现方案 |
-| 6 | PipeWire 跨 compositor 兼容性 |
-| 7 | `screen_snapshot()` 语义重定义（AT-SPI2 覆盖率 ~5% 现实下） |
-| 8 | 光标校准协议（解决 P1 内部坐标与屏幕坐标脱节） |
-| 9 | D-Bus 异步模型选型（dbus-python + GLib vs dbus-next asyncio） |
-| 10 | 工具面设计：perception 能力如何融入现有 4-tool 结构 |
-| 11 | ScreenBackend 与 InputBackend 的职责边界 |
-| 12 | P2 测试策略（D-Bus mock、AT-SPI2 mock、差分算法测试） |
+| # | 事项 | P2 决策 |
+|---|------|---------|
+| 4 | 无障碍树库 | **放弃** — AT-SPI2 COSMIC 覆盖率 0%，不集成 |
+| 5 | 差分截图 | **推迟** — 留给后续 P2-B |
+| 6 | PipeWire 兼容性 | **转用 xdg-desktop-portal** — dbus-python + GLib 线程桥接 |
+| 7 | `screen_snapshot()` 语义 | **screenshot-first** — elements 始终为空，accessible=false 为正常状态 |
+| 8 | 光标校准 | **tracked cursor** — 硬件 overlay 截图不含光标，source="tracked" confidence="low" |
+| 9 | D-Bus 异步模型 | **dbus-python** — dbus-next 存在 introspection bug 不可用 |
+| 10 | 工具面设计 | **保持 4 tool** — screen 扩展 snapshot action，不引入新 tool |
+| 11 | Backend 边界 | **ScreenBackend 独立于 InputBackend** — 新增 ScreenshotBackend 抽象 |
+| 12 | 测试策略 | **分层测试** — 单元测试 mock D-Bus，集成测试需真实 Wayland 环境 |
 
 ### Phase 3 需确认
 
-> P3A 核心议题已通过 [openspec/changes/phase3a-intelligence-layer/](../openspec/changes/phase3a-intelligence-layer/) 决议：
+> P3A 核心议题已通过 [openspec/changes/archive/2026-05-24-phase3a-intelligence-layer/](../openspec/changes/archive/2026-05-24-phase3a-intelligence-layer/) 决议：
 > - #7 默认策略 → 采用 provider 抽象，支持本地/云端模型切换（P3A-4 Spike 选型）
 > - #8 本地模型选型 → 留待 P3A Spike 实测 OmniParser v2、UI-TARS、云 VLM 后确定
 > - #9 `AnalysisResult` 兼容演进 → 采用三层公开模型（SnapshotResult / AnalysisResult / ScreenState），`ScreenSnapshot` 降级为内部模型
@@ -119,7 +124,7 @@ grim+slurp / wlr-screencopy：
 
 ## 技术参考
 
-> 详见原始 ROADMAP.md 第 5 节（关键参考项目、论文、数据）。
+> 详见 [AI-GUI-MCP-ROADMAP-v3.md](AI-GUI-MCP-ROADMAP-v3.md) 第 5 节（关键参考项目、论文、数据）。
 > 此处仅保留摘要。
 
 ### 关键数据

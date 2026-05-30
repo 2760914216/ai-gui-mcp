@@ -16,7 +16,7 @@
 
 | 项目 | 位置 |
 |------|------|
-| 总体规划 | [docs/ROADMAP.md](docs/ROADMAP.md) |
+| 总体规划 | [docs/AI-GUI-MCP-ROADMAP-v3.md](docs/AI-GUI-MCP-ROADMAP-v3.md) |
 | P0 技术验证 | [docs/PHASE0-SPIKE.md](docs/PHASE0-SPIKE.md) |
 | P1 实现计划 | [docs/PHASE1-IMPLEMENTATION.md](docs/PHASE1-IMPLEMENTATION.md) |
 | P0 验证结果 | [docs/PHASE0-SPIKE-RESULTS.md](docs/PHASE0-SPIKE-RESULTS.md) |
@@ -28,8 +28,8 @@
 | P2 实现计划 | [docs/PHASE2-IMPLEMENTATION.md](docs/PHASE2-IMPLEMENTATION.md) |
 | P3A 讨论草案 | [docs/PHASE3A-DRAFT.md](docs/PHASE3A-DRAFT.md) |
 | P3A 模型选型验证 | [docs/PHASE3A-SPIKE.md](docs/PHASE3A-SPIKE.md) |
+| P3A Spike 验证结果 | [docs/PHASE3A-SPIKE-RESULTS.md](docs/PHASE3A-SPIKE-RESULTS.md) |
 | P3A 实现计划 | [openspec/changes/archive/2026-05-24-phase3a-intelligence-layer/](openspec/changes/archive/2026-05-24-phase3a-intelligence-layer/) |
-| V3 路线图（设计参考） | [docs/AI-GUI-MCP-ROADMAP-v3.md](docs/AI-GUI-MCP-ROADMAP-v3.md) |
 | 开发环境及规约 | [openspec/config.yaml](openspec/config.yaml) |
 
 ### 技术栈（当前阶段）
@@ -63,7 +63,6 @@ ai-gui-mcp/
 │   ├── changes/
 │   └── specs/
 ├── docs/                             ← 项目文档
-│   ├── ROADMAP.md
 │   ├── PHASE0-SPIKE.md
 │   ├── PHASE0-SPIKE-RESULTS.md
 │   ├── PHASE1-IMPLEMENTATION.md
@@ -72,6 +71,7 @@ ai-gui-mcp/
 │   ├── PHASE2-IMPLEMENTATION.md
 │   ├── PHASE3A-DRAFT.md
 │   ├── PHASE3A-SPIKE.md
+│   ├── PHASE3A-SPIKE-RESULTS.md
 │   ├── FUTURE-REFERENCE.md
 │   ├── P1-potential-issue.md
 │   ├── P2-potential-issue.md

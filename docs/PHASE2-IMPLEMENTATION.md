@@ -536,9 +536,9 @@ dependencies = [
 
 ### Step 7 — 文档更新
 
-- [ ] 更新 `docs/ROADMAP.md` — P2 状态
-- [ ] 更新 `AGENTS.md` — 加入 P2 文档路径
-- [ ] 更新 `docs/FUTURE-REFERENCE.md` — P1 已确认事项移到 P2 已确认
+- [x] 更新 `docs/AI-GUI-MCP-ROADMAP-v3.md` — P2 状态（已于 2026-05-30 合并至 v3）
+- [x] 更新 `AGENTS.md` — 加入 P2 文档路径
+- [x] 更新 `docs/FUTURE-REFERENCE.md` — P2 决策提炼至已确认
 
 ### Step 8 — 集成测试与打磨
 

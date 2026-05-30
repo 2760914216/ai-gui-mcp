@@ -528,7 +528,7 @@ perception:
 
 ### 参考文档
 
-- [ROADMAP.md](ROADMAP.md) — Phase 2 概述
+- [AI-GUI-MCP-ROADMAP-v3.md](AI-GUI-MCP-ROADMAP-v3.md) — Phase 2 概述
 - [PHASE0-SPIKE-RESULTS.md](PHASE0-SPIKE-RESULTS.md) — Phase 0 实测数据（AT-SPI2 覆盖率、截图可行性）
 - [FUTURE-REFERENCE.md](FUTURE-REFERENCE.md) — 待确认技术选型
 - [AI-GUI-MCP-ROADMAP-v3.md](AI-GUI-MCP-ROADMAP-v3.md) — P2 详细设计 + P3 并行建议
