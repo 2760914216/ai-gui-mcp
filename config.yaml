@@ -26,7 +26,46 @@ perception:
     accessibility:
       enabled: true
     vision:
-      backend: "dummy"
+      backend: "pipeline_gq"
+
+      # ── Pipeline GQ parameters (active when backend: "pipeline_gq") ──
+      pipeline_gq:
+        # Paths to locally downloaded models (required; download from HuggingFace)
+        gdino_model_path: "/home/ruruka/文档/Models/grounding-dino-tiny"
+        qwen_model_path: "/home/ruruka/文档/Models/Qwen3VL4BInst"
+
+        # Quantization (NULL = FP16 for GDINO, "q4" recommended for Qwen)
+        gdino_quantization: null       # null | "int8" | "int4"
+        qwen_quantization: "q4"        # "q4" | "none"
+
+        # Detection effort: "low" = high-precision but low-coverage, "high" = high-coverage but less precise
+        effort: "high"                  # "low" | "high"
+
+        # Idle timeout before unloading models from GPU (0 = never unload)
+        idle_shutdown_sec: 600         # 10 minutes
+
+        # Open-vocabulary text prompt for GDINO detection
+        text_prompt: "button. input field. text label. checkbox. radio button. tab. menu item. link. window. dialog. sidebar. toolbar. panel. list. table. form field."
+
+        # GDINO box thresholds (effort selects which one to use)
+        box_threshold_low: 0.17        # effort="low"
+        box_threshold_high: 0.13       # effort="high"
+
+        # Post-processing: drop bboxes covering >50% of screen
+        area_filter_ratio: 0.5
+
+        # Post-processing: IoU deduplication threshold
+        iou_dedup_threshold: 0.5
+
+        # Minimum crop side length (adaptive: 32 for >1024×768, 16 for smaller)
+        min_crop_size_full: 32
+        min_crop_size_zoom: 16
+
+        # Input image scaling before inference
+        img_scale: 0.5                 # 1.0 = full resolution
+
+        # Max tokens per crop region for Qwen
+        max_tokens_per_region: 64
 
 behavior:
   profile: "none"

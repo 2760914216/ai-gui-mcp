@@ -14,6 +14,14 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0.0"]
+vision = [
+    "torch>=2.0.0",
+    "transformers>=4.45.0",
+    "groundingdino-py>=0.4.0",
+    "accelerate>=0.26.0",
+    "bitsandbytes>=0.41.0",
+    "Pillow>=10.0.0",
+]
 # dbus-python and PyGObject (gi) are system packages (apt):
 #   python3-dbus, python3-gi — required for dbus-python screenshot path
 # Enable include-system-site-packages in venv to use them.
