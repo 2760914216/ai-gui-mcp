@@ -136,7 +136,7 @@ async def list_tools():
                     "action": {
                         "type": "string",
                         "enum": ["size", "cursor", "snapshot", "analyze", "image"],
-                        "description": "Screen operation: size (resolution), cursor (tracked position), snapshot (observation handle), analyze (structured GUI understanding), image (raw base64 PNG on demand)",
+                        "description": "Screen operation: size (resolution), cursor (tracked position), snapshot (observation handle), analyze (AI-powered GUI understanding via vision model), image (raw base64 PNG on demand)",
                     },
                     "snapshot_id": {
                         "type": "string",
@@ -412,10 +412,10 @@ async def main():
     screen_backend = _create_screen_backend(config)
     set_screen_backend(screen_backend)
 
-    # Initialize P3A PerceptionService
     from src.stores.observation import ObservationStore
     from src.services.perception import PerceptionService
     from src.providers.screenshot import PortalScreenshotProvider
+    from src.config import load_vision_config
 
     max_count = _deep_get(config, "perception.service.snapshot_max_count", 16)
     ttl_sec = _deep_get(config, "perception.service.snapshot_ttl_sec", 300)
@@ -427,14 +427,62 @@ async def main():
         memory_budget_mb=mem_mb,
     )
     screenshot_provider = PortalScreenshotProvider(screen_backend)
+
+    vision_config = load_vision_config(config)
+    vision_provider = None
+
+    if vision_config.backend == "pipeline_gq":
+        from src.providers.vision import PipelineGQVisionProvider
+        import sys
+        try:
+            vp = PipelineGQVisionProvider(vision_config)
+            vision_provider = vp
+            print("[ai-gui-mcp] vision backend: pipeline_gq (lazy-load on first analyze)", file=sys.stderr)
+        except ImportError as exc:
+            print(f"[ai-gui-mcp] WARNING: {exc}", file=sys.stderr)
+            print("[ai-gui-mcp] falling back to dummy vision provider", file=sys.stderr)
+            from src.providers.vision import DummyVisionProvider
+            vision_provider = DummyVisionProvider()
+
+    if vision_provider is None:
+        from src.providers.vision import DummyVisionProvider
+        vision_provider = DummyVisionProvider()
+
     perception = PerceptionService(
         input_backend=backend,
         screenshot_provider=screenshot_provider,
         observation_store=store,
+        vision_provider=vision_provider,
     )
     set_perception_service(perception)
 
-    # Log detected vs configured resolution
+    import time as _time
+    _last_analyze = _time.time()
+    _orig_analyze = perception.analyze
+    _vp = vision_provider
+    _idle_sec = vision_config.idle_shutdown_sec
+
+    def _analyze_with_reset(snapshot_id=None):
+        nonlocal _last_analyze
+        _last_analyze = _time.time()
+        return _orig_analyze(snapshot_id)
+
+    perception.analyze = _analyze_with_reset
+
+    if _idle_sec > 0:
+
+        async def _idle_loop():
+            nonlocal _last_analyze
+            while True:
+                await asyncio.sleep(_idle_sec)
+                elapsed = _time.time() - _last_analyze
+                if elapsed >= _idle_sec:
+                    from src.providers.vision import PipelineGQVisionProvider
+                    if isinstance(_vp, PipelineGQVisionProvider):
+                        _vp.shutdown()
+
+        asyncio.create_task(_idle_loop())
+
     w, h = backend.screen_size()
     config_w = _deep_get(config, "screen.width")
     config_h = _deep_get(config, "screen.height")
