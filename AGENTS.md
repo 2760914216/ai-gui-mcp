@@ -30,6 +30,7 @@
 | P3A 模型选型验证 | [docs/PHASE3A-SPIKE.md](docs/PHASE3A-SPIKE.md) |
 | P3A Spike 验证结果 | [docs/PHASE3A-SPIKE-RESULTS.md](docs/PHASE3A-SPIKE-RESULTS.md) |
 | P3A 实现计划 | [openspec/changes/archive/2026-05-24-phase3a-intelligence-layer/](openspec/changes/archive/2026-05-24-phase3a-intelligence-layer/) |
+| P3A Pipeline GQ 实现 | [openspec/changes/archive/2026-05-30-phase3a-vision-pipeline-gq/](openspec/changes/archive/2026-05-30-phase3a-vision-pipeline-gq/) |
 | 开发环境及规约 | [openspec/config.yaml](openspec/config.yaml) |
 
 ### 技术栈（当前阶段）
@@ -91,7 +92,15 @@ ai-gui-mcp/
 │   │   ├── __init__.py
 │   │   ├── screenshot.py
 │   │   ├── a11y.py
-│   │   └── vision.py
+│   │   ├── vision.py
+│   │   ├── vision_postprocess.py
+│   │   ├── gdino/
+│   │   │   ├── __init__.py
+│   │   │   ├── detector.py
+│   │   │   └── label_mapper.py
+│   │   └── qwen_vl/
+│   │       ├── __init__.py
+│   │       └── descriptor.py
 │   ├── services/
 │   │   ├── __init__.py
 │   │   └── perception.py
@@ -99,6 +108,7 @@ ai-gui-mcp/
 │   │   ├── __init__.py
 │   │   └── observation.py
 │   └── tests/
+│       ├── __init__.py
 │       ├── test_mouse.py
 │       ├── test_keyboard.py
 │       ├── test_batch.py
@@ -106,7 +116,12 @@ ai-gui-mcp/
 │       ├── test_models_p3a.py
 │       ├── test_observation_store.py
 │       ├── test_perception_service.py
-│       └── test_providers.py
+│       ├── test_providers.py
+│       ├── test_vision_pipeline_gq.py
+│       ├── test_qwen_vl.py
+│       ├── test_vision_postprocess.py
+│       ├── test_label_mapper.py
+│       └── test_gdino.py
 ├── ignore_draft/                     ← 忽略，草稿和临时笔记
 │   ├── overview.md
 │   ├── Suggestions-For-ROADMAP.md

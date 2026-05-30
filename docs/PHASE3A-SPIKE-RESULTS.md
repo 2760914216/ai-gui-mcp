@@ -283,3 +283,20 @@ GDINO 倾向于检测全屏/半屏窗口作为单一元素（如 `[14,6,2546,158
   - COMIC-setting 阈值扫描 7 组 × 3 (21 files)
   - Zoom-In 5 张 × 2 阈值 × 3 (30 files)
   - 总计 75 个输出文件
+
+---
+
+## 15. 实现状态
+
+Pipeline GQ（Grounding DINO-T + Qwen3-VL-4B 两阶段管道）已从 spike 验证阶段进入正式实现。
+
+**实现 Change**: [openspec/changes/archive/2026-05-30-phase3a-vision-pipeline-gq/](../openspec/changes/archive/2026-05-30-phase3a-vision-pipeline-gq/)
+
+**关键产物**:
+- `src/providers/vision.py` — `PipelineGQVisionProvider`
+- `src/providers/gdino/` — `GroundingDINODetector` + `GdinoLabelMapper`
+- `src/providers/qwen_vl/` — `QwenVLDescriptor` + `QwenTypeMapper`
+- `src/providers/vision_postprocess.py` — 后处理工具（面积过滤、IoU 去重、min_crop 自适应）
+- `config.yaml` — `perception.providers.vision` 完整配置段
+
+> ⚠️ **实现后实测**：上述 Spike 表格中 "推理速度 15-35s" 为 Spike 期间极端参数跑出的数值（高元素数 + 全裁剪描述）。实际实现后的识别 pipeline 延迟约 **4-6 秒**，延迟不大。
