@@ -1,0 +1,193 @@
+{
+  "snapshot_id": "vscode",
+  "overall_quality": "medium",
+  "warnings": [
+    {
+      "code": "hallucinated_element",
+      "severity": "medium",
+      "message": "Detected 15/17 button elements with no text — likely model repetition artifact; only the first 5 button elements are preserved"
+    }
+  ],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "ide",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "sidebar",
+        "bbox": [
+          0,
+          37,
+          168,
+          945
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "editor",
+        "bbox": [
+          168,
+          37,
+          999,
+          527
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-3",
+        "type": "panel",
+        "bbox": [
+          168,
+          527,
+          999,
+          945
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "text",
+      "bbox": [
+        473,
+        0,
+        516,
+        18
+      ],
+      "text": "5月24日 19:48",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "text",
+      "bbox": [
+        747,
+        0,
+        807,
+        18
+      ],
+      "text": "cn | altrg-pinyin",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "button",
+      "bbox": [
+        830,
+        0,
+        845,
+        18
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "button",
+      "bbox": [
+        845,
+        0,
+        860,
+        18
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "button",
+      "bbox": [
+        860,
+        0,
+        875,
+        18
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "button",
+      "bbox": [
+        875,
+        0,
+        890,
+        18
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "button",
+      "bbox": [
+        890,
+        0,
+        905,
+        18
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"element-1\",\n      \"type\": \"text\",\n      \"bbox\": [473, 0, 516, 18],\n      \"text\": \"5月24日 19:48\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-2\",\n      \"type\": \"text\",\n      \"bbox\": [747, 0, 807, 18],\n      \"text\": \"cn | altrg-pinyin\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [830, 0, 845, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [845, 0, 860, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [860, 0, 875, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"button\",\n      \"bbox\": [875, 0, 890, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"button\",\n      \"bbox\": [890, 0, 905, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"button\",\n      \"bbox\": [905, 0, 920, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"button\",\n      \"bbox\": [920, 0, 935, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"button\",\n      \"bbox\": [935, 0, 950, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"button\",\n      \"bbox\": [950, 0, 965, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"button\",\n      \"bbox\": [965, 0, 980, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"button\",\n      \"bbox\": [980, 0, 995, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"button\",\n      \"bbox\": [995, 0, 1010, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      ",
+    "fine_raw_last": "ment-4\",\n      \"type\": \"button\",\n      \"bbox\": [845, 0, 860, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [860, 0, 875, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"button\",\n      \"bbox\": [875, 0, 890, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"button\",\n      \"bbox\": [890, 0, 905, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"button\",\n      \"bbox\": [905, 0, 920, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"button\",\n      \"bbox\": [920, 0, 935, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"button\",\n      \"bbox\": [935, 0, 950, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"button\",\n      \"bbox\": [950, 0, 965, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"button\",\n      \"bbox\": [965, 0, 980, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"button\",\n      \"bbox\": [980, 0, 995, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"button\",\n      \"bbox\": [995, 0, 1010, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-15\",\n      \"type\": \"button\",\n      \"bbox\": [1010, 0, 1025, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-16\",\n      \"type\": \"button\",\n      \"bbox\": [1025, 0, 1040, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-17\",\n      \"type\": \"button\",\n      \"bbox\": [1040, 0, 1055, 18],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-18\",\n      \"type\": \"button\",\n      \"bbox\": [1055"
+  },
+  "_timing": {
+    "load_s": 3.2,
+    "stage1_s": 4.0,
+    "stage2_s": 21.3,
+    "total_s": 28.5
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/vscode.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

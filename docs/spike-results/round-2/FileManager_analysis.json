@@ -1,0 +1,208 @@
+{
+  "snapshot_id": "FileManager",
+  "overall_quality": "high",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "file_manager",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "sidebar",
+        "type": "sidebar",
+        "bbox": [
+          246,
+          139,
+          387,
+          735
+        ],
+        "detail": null
+      },
+      {
+        "id": "content",
+        "type": "content",
+        "bbox": [
+          387,
+          139,
+          746,
+          735
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "window",
+      "bbox": [
+        246,
+        137,
+        750,
+        748
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "toolbar",
+      "bbox": [
+        246,
+        137,
+        750,
+        194
+      ],
+      "text": "文件\\t编辑\\t视图\\t排序",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-8",
+      "type": "panel",
+      "bbox": [
+        246,
+        194,
+        388,
+        748
+      ],
+      "text": "最近访问\\n主页\\n文档\\n下载\\n音乐\\n图片\\n视频\\n回收站\\n网络\\n1.0 TB 卷",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "menuitem",
+      "bbox": [
+        400,
+        183,
+        550,
+        200
+      ],
+      "text": "主页面 > 图片 > Screenshots",
+      "description": null,
+      "confidence": 0.96,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-9",
+      "type": "header",
+      "bbox": [
+        396,
+        200,
+        733,
+        225
+      ],
+      "text": "名称\\t修改时间\\t大小",
+      "description": null,
+      "confidence": 0.96,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "icon",
+      "bbox": [
+        668,
+        150,
+        683,
+        170
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "button",
+      "bbox": [
+        688,
+        150,
+        703,
+        170
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "button",
+      "bbox": [
+        713,
+        150,
+        728,
+        170
+      ],
+      "text": "▼",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "button",
+      "bbox": [
+        733,
+        150,
+        748,
+        170
+      ],
+      "text": "×",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"window-title-bar\",\n      \"type\": \"window\",\n      \"bbox\": [246, 137, 750, 748],\n      \"text\": \"\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"file-manager-toolbar\",\n      \"type\": \"toolbar\",\n      \"bbox\": [246, 137, 750, 194],\n      \"text\": \"文件\\t编辑\\t视图\\t排序\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"breadcrumb-navigation\",\n      \"type\": \"menuitem\",\n      \"bbox\": [400, 183, 550, 200],\n      \"text\": \"主页面 > 图片 > Screenshots\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"search-icon\",\n      \"type\": \"icon\",\n      \"bbox\": [668, 150, 683, 170],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"filter-button\",\n      \"type\": \"button\",\n      \"bbox\": [688, 150, 703, 170],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"sort-button\",\n      \"type\": \"button\",\n      \"bbox\": [713, 150, 728, 170],\n      \"text\": \"▼\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"close-window-button\",\n      \"type\": \"button\",\n      \"bbox\": [733, 150, 748, 170],\n      \"text\": \"×\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"left-nav-panel\",\n      \"type\": \"panel\",\n      \"bbox\": [246, 194, 388, 748],\n      \"text\": \"最近访问\\n主页\\n文档\\n下载\\n音乐\\n图片\\n视频\\n回收站\\n网络\\n1.0 TB 卷\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"file-list-header\",\n      \"type\": \"header\",\n      \"bbox\": [396, 200, 733, 225],\n      \"text\": \"名称\\t修改时间\\t大小\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"file-entry-1\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 225, 733, 255],\n      \"text\": \"Desktop.png\\t2026年5月26日 22:20\\t5.8 MB\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"file-entry-2\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 255, 733, 285],\n      \"text\": \"MessageBox-confirmation.png\\t2026年5月28日 14:04\\t554.6 KB\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"file-entry-3\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 285, 733, 315],\n      \"text\": \"Screenshot_2020-04-30_14-43-19.png\\t2026年4月30日 14",
+    "fine_raw_last": "\n      \"id\": \"breadcrumb-navigation\",\n      \"type\": \"menuitem\",\n      \"bbox\": [400, 183, 550, 200],\n      \"text\": \"主页面 > 图片 > Screenshots\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"search-icon\",\n      \"type\": \"icon\",\n      \"bbox\": [668, 150, 683, 170],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"filter-button\",\n      \"type\": \"button\",\n      \"bbox\": [688, 150, 703, 170],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"sort-button\",\n      \"type\": \"button\",\n      \"bbox\": [713, 150, 728, 170],\n      \"text\": \"▼\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"close-window-button\",\n      \"type\": \"button\",\n      \"bbox\": [733, 150, 748, 170],\n      \"text\": \"×\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"left-nav-panel\",\n      \"type\": \"panel\",\n      \"bbox\": [246, 194, 388, 748],\n      \"text\": \"最近访问\\n主页\\n文档\\n下载\\n音乐\\n图片\\n视频\\n回收站\\n网络\\n1.0 TB 卷\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"file-list-header\",\n      \"type\": \"header\",\n      \"bbox\": [396, 200, 733, 225],\n      \"text\": \"名称\\t修改时间\\t大小\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"file-entry-1\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 225, 733, 255],\n      \"text\": \"Desktop.png\\t2026年5月26日 22:20\\t5.8 MB\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"file-entry-2\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 255, 733, 285],\n      \"text\": \"MessageBox-confirmation.png\\t2026年5月28日 14:04\\t554.6 KB\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"file-entry-3\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 285, 733, 315],\n      \"text\": \"Screenshot_2020-04-30_14-43-19.png\\t2026年4月30日 14:43\\t138.2 KB\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"file-entry-4\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 315, 733, 345],\n      \"text\": \"Screenshot_2020-05-02_21-45-13.png\\t2026年5月2日 21:45\\t412.2 KB\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"file-entry-5\",\n      \"type\": \"list-item\",\n      \"bbox\": [396, 345, 733,"
+  },
+  "_timing": {
+    "load_s": 3.2,
+    "stage1_s": 3.1,
+    "stage2_s": 20.8,
+    "total_s": 27.2
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/FileManager.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

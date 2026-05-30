@@ -227,7 +227,7 @@ P3A 主结果应更像 **parser result**，而不是 report。
   "elements": [
     {
       "id": "el_001",
-      "type": "button|input|checkbox|radio|tab|menuitem|link|window|dialog|sidebar|toolbar|panel|list|table|form|text|unknown",
+      "type": "button|input|checkbox|radio|tab|menuitem|link|window|dialog|sidebar|toolbar|panel|list|table|form|text|unknown|icon",
       "bbox": [100, 50, 80, 24],
       "text": "Save",
       "description": "save button",

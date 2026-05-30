@@ -816,7 +816,7 @@ Step 3: bbox_v2 区域 → 模型 A (细) → 最终 bbox
 |------|--------|------|------|---------|-----|
 | **ScreenSpot** | 1,272 | 移动/桌面/Web | 中 | Qwen3-VL-32B 95.8% | [leaderboard](https://gui-agent.github.io/grounding-leaderboard/) |
 | **ScreenSpot-v2** | ~1,300 | 多平台 | 中 | Qwen3-VL-32B 95.8% | 同上 |
-| **ScreenSpot-Pro** | 1,581 | 专业高分辨率 | 极高 | Claude 4.7 87.6% (w/ tools) | [leaderboard](https://gui-agent.github.io/grounding-leaderboard/screenspot.html) |
+| **ScreenSpot-Pro** | 1,581 | 专业高分辨率 | 极高 | Claude 4.7 87.6% (with tools) | [leaderboard](https://gui-agent.github.io/grounding-leaderboard/screenspot.html) |
 | **OSWorld** | 369 | 真实桌面 | 高 | Claude Opus 4.6 72.7% | [leaderboard](https://llm-stats.com/benchmarks/osworld) |
 | **OSWorld-G** | — | 仅 grounding | 高 | KV-Ground-8B 68.1% | — |
 | **AutoGUI-v2** | — | 功能理解 | 高 | OpenCUA-72B 67.9% | [GitHub](https://github.com/ZJULiHongxin/AutoGUI-v2) |
@@ -835,7 +835,7 @@ ScreenSpot（v1/v2）已趋于饱和（Top 模型 95.8%），区分度不足。
 ### 9.3 注意：基准的局限性
 
 - **数据污染风险**：部分模型可能在 ScreenSpot 测试集上训练过
-- **分辨率差异**：ScreenSpot 截图分辨率远低于 4K COSMIC 桌面
+- **分辨率差异**：ScreenSpot 截图分辨率远低于 2K COSMIC 桌面
 - **平台偏差**：绝大多数基准截图来自 Windows/macOS，Linux/Wayland 截图零覆盖
 - **串表风险**：聚合网站（如某些 LLM stats 站）可能张冠李戴
 
@@ -1081,7 +1081,7 @@ Step 3: 采用架构 A（KV-Ground-8B + 后处理）
 
 | 模型 | 关键来源 |
 |------|---------|
-| Qwen-VL | [HF Collection](https://huggingface.co/collections/Qwen/qwen3-vl), [Qwen2.5-VL](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct), [Pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) |
+| Qwen-VL | [HF Collection](https://huggingface.co/collections/Qwen/qwen3-vl), [Qwen3-VL](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct), [Pricing](https://docs.qwencloud.com/developer-guides/getting-started/pricing) |
 | Claude | [System Card](https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47/claude-opus-4-and-claude-sonnet-4-system-card.pdf) |
 | Gemini | [Auxiliary Reasoning arXiv 2509.11548](https://arxiv.org/abs/2509.11548) |
 

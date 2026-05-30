@@ -1,0 +1,10 @@
+# Elements for vscode.png
+# Total: 7
+
+[1] type=text text="5月24日 19:48" bbox=[473,0,516,18] confidence=0.98
+[2] type=text text="cn | altrg-pinyin" bbox=[747,0,807,18] confidence=0.97
+[3] type=button bbox=[830,0,845,18] confidence=0.95
+[4] type=button bbox=[845,0,860,18] confidence=0.95
+[5] type=button bbox=[860,0,875,18] confidence=0.95
+[6] type=button bbox=[875,0,890,18] confidence=0.95
+[7] type=button bbox=[890,0,905,18] confidence=0.95

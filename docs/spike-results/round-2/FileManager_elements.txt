@@ -1,0 +1,12 @@
+# Elements for FileManager.png
+# Total: 9
+
+[1] type=window bbox=[246,137,750,748] confidence=0.98
+[2] type=toolbar text="文件\t编辑\t视图\t排序" bbox=[246,137,750,194] confidence=0.97
+[3] type=panel text="最近访问\n主页\n文档\n下载\n音乐\n图片\n视频\n回收站\n网络\n1.0 TB 卷" bbox=[246,194,388,748] confidence=0.97
+[4] type=menuitem text="主页面 > 图片 > Screenshots" bbox=[400,183,550,200] confidence=0.96
+[5] type=header text="名称\t修改时间\t大小" bbox=[396,200,733,225] confidence=0.96
+[6] type=icon bbox=[668,150,683,170] confidence=0.95
+[7] type=button text="-" bbox=[688,150,703,170] confidence=0.95
+[8] type=button text="▼" bbox=[713,150,728,170] confidence=0.95
+[9] type=button text="×" bbox=[733,150,748,170] confidence=0.95

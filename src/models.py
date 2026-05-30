@@ -52,6 +52,9 @@ class AnalysisWarning(BaseModel):
         "partial_parse",
         "unsupported_layout",
         "low_visibility_elements",
+        "duplicate_element",
+        "hallucinated_element",
+        "model_parse_error",
     ]
     severity: Literal["low", "medium", "high"]
     message: str
@@ -70,7 +73,7 @@ class LayoutRegion(BaseModel):
         "sidebar", "toolbar", "editor", "content",
         "dialog", "panel", "list", "table", "form", "unknown",
     ]
-    bbox: list[int]  # [x, y, w, h]
+    bbox: list[int]  # [x1, y1, x2, y2]
     detail: Optional[str] = None
 
 
@@ -101,7 +104,7 @@ class ParsedElement(BaseModel):
         "window", "dialog", "sidebar", "toolbar", "panel", "list", "table",
         "form", "text", "unknown",
     ]
-    bbox: list[int]  # [x, y, w, h]
+    bbox: list[int]  # [x1, y1, x2, y2]
     text: Optional[str] = None
     description: Optional[str] = None
     confidence: Optional[float] = None  # 0.0-1.0, null for accessibility
@@ -148,7 +151,7 @@ class UIElement(BaseModel):
     id: str
     role: Optional[str] = None
     name: Optional[str] = None
-    bbox: Optional[list[int]] = None  # [x, y, w, h]
+    bbox: Optional[list[int]] = None  # [x1, y1, x2, y2]
     states: Optional[list[str]] = None
     parent: Optional[str] = None  # parent element id
     confidence: Optional[float] = None  # 0.0-1.0, null for accessibility tree

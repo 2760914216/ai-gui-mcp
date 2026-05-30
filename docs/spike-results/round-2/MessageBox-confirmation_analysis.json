@@ -1,0 +1,74 @@
+{
+  "snapshot_id": "MessageBox-confirmation",
+  "overall_quality": "medium",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "ide",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "sidebar",
+        "bbox": [
+          0,
+          34,
+          175,
+          968
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "editor",
+        "bbox": [
+          175,
+          34,
+          815,
+          968
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-3",
+        "type": "status_bar",
+        "bbox": [
+          0,
+          912,
+          999,
+          968
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n[\n  {\n    \"id\": \"element-1\",\n    \"type\": \"dialog\",\n    \"bbox\": [374, 386, 655, 535],\n    \"text\": \"永久删除？\\nmnexport177883999249.jpg 将被永久删除。此操作无法撤销。\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-2\",\n    \"type\": \"button\",\n    \"bbox\": [578, 490, 617, 520],\n    \"text\": \"取消\",\n    \"confidence\": 0.97\n  },\n  {\n    \"id\": \"element-3\",\n    \"type\": \"button\",\n    \"bbox\": [617, 490, 655, 520],\n    \"text\": \"删除\",\n    \"confidence\": 0.97\n  },\n  {\n    \"id\": \"element-4\",\n    \"type\": \"text\",\n    \"bbox\": [417, 527, 545, 550],\n    \"text\": \"mnexport177883999249.jpg\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-5\",\n    \"type\": \"text\",\n    \"bbox\": [595, 527, 665, 550],\n    \"text\": \"2026年5月16日 06:34\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-6\",\n    \"type\": \"text\",\n    \"bbox\": [695, 527, 725, 550],\n    \"text\": \"532.2 KB\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-7\",\n    \"type\": \"text\",\n    \"bbox\": [417, 557, 595, 580],\n    \"text\": \"pic_5f5ff136d10b687729536c1c30c29e9.jpeg\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-8\",\n    \"type\": \"text\",\n    \"bbox\": [595, 557, 665, 580],\n    \"text\": \"2026年3月19日 10:59\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-9\",\n    \"type\": \"text\",\n    \"bbox\": [695, 557, 725, 580],\n    \"text\": \"137.4 KB\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-10\",\n    \"type\": \"text\",\n    \"bbox\": [417, 587, 545, 610],\n    \"text\": \"Screenshot_2026-03-14_20-59-29.png\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-11\",\n    \"type\": \"text\",\n    \"bbox\": [595, 587, 665, 610],\n    \"text\": \"2026年3月14日 20:59\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-12\",\n    \"type\": \"text\",\n    \"bbox\": [695, 587, 725, 610],\n    \"text\": \"598.8 KB\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-13\",\n    \"type\": \"text\",\n    \"bbox\": [417, 617, 545, 640],\n    \"text\": \"Screenshot_2026-03-22_14-15-59.png\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-14\",\n    \"type\": \"text\",\n    \"bbox\": [595, 617, 665, 640],\n    \"text",
+    "fine_raw_last": "```json\n[\n  {\n    \"id\": \"element-1\",\n    \"type\": \"dialog\",\n    \"bbox\": [374, 386, 655, 535],\n    \"text\": \"永久删除？\\nmnexport177883999249.jpg 将被永久删除。此操作无法撤销。\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-2\",\n    \"type\": \"button\",\n    \"bbox\": [578, 490, 617, 520],\n    \"text\": \"取消\",\n    \"confidence\": 0.97\n  },\n  {\n    \"id\": \"element-3\",\n    \"type\": \"button\",\n    \"bbox\": [617, 490, 655, 520],\n    \"text\": \"删除\",\n    \"confidence\": 0.97\n  },\n  {\n    \"id\": \"element-4\",\n    \"type\": \"text\",\n    \"bbox\": [417, 527, 545, 550],\n    \"text\": \"mnexport177883999249.jpg\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-5\",\n    \"type\": \"text\",\n    \"bbox\": [595, 527, 665, 550],\n    \"text\": \"2026年5月16日 06:34\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-6\",\n    \"type\": \"text\",\n    \"bbox\": [695, 527, 725, 550],\n    \"text\": \"532.2 KB\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-7\",\n    \"type\": \"text\",\n    \"bbox\": [417, 557, 595, 580],\n    \"text\": \"pic_5f5ff136d10b687729536c1c30c29e9.jpeg\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-8\",\n    \"type\": \"text\",\n    \"bbox\": [595, 557, 665, 580],\n    \"text\": \"2026年3月19日 10:59\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-9\",\n    \"type\": \"text\",\n    \"bbox\": [695, 557, 725, 580],\n    \"text\": \"137.4 KB\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-10\",\n    \"type\": \"text\",\n    \"bbox\": [417, 587, 545, 610],\n    \"text\": \"Screenshot_2026-03-14_20-59-29.png\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-11\",\n    \"type\": \"text\",\n    \"bbox\": [595, 587, 665, 610],\n    \"text\": \"2026年3月14日 20:59\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-12\",\n    \"type\": \"text\",\n    \"bbox\": [695, 587, 725, 610],\n    \"text\": \"598.8 KB\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-13\",\n    \"type\": \"text\",\n    \"bbox\": [417, 617, 545, 640],\n    \"text\": \"Screenshot_2026-03-22_14-15-59.png\",\n    \"confidence\": 0.96\n  },\n  {\n    \"id\": \"element-14\",\n    \"type\": \"text\",\n    \"bbox\": [595, 617, 665, 640],\n    \"text"
+  },
+  "_timing": {
+    "load_s": 3.2,
+    "stage1_s": 4.0,
+    "stage2_s": 20.9,
+    "total_s": 28.2
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/MessageBox-confirmation.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

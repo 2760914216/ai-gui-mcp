@@ -1,0 +1,18 @@
+# Elements for COMIC-setting.png
+# Total: 15
+
+[1] type=window text="电源与电池" bbox=[246,138,752,744] confidence=0.98
+[2] type=button bbox=[246,144,274,172] confidence=0.95
+[3] type=button bbox=[274,144,296,172] confidence=0.95
+[4] type=button text="-" bbox=[693,148,710,168] confidence=0.95
+[5] type=button text="×" bbox=[710,148,726,168] confidence=0.95
+[6] type=menu text="网络与无线\n蓝牙\n无障碍\n桌面\n显示\n声音\n电源与电池\n输入设备\n应用程序\n时间与语言\n系统与账户" bbox=[246,172,388,528] confidence=0.95
+[7] type=text text="电源与电池" bbox=[405,172,485,200] confidence=0.95
+[8] type=text text="电池 91% (21 分钟后充满)" bbox=[405,232,485,250] confidence=0.95
+[9] type=text text="电源模式" bbox=[405,272,438,288] confidence=0.95
+[10] type=text text="延长电池续航" bbox=[405,300,476,316] confidence=0.95
+[11] type=text text="降低功耗并保持静音运行" bbox=[405,316,496,332] confidence=0.95
+[12] type=text text="节能" bbox=[405,344,445,360] confidence=0.95
+[13] type=text text="静音运行和适中的功耗" bbox=[405,360,488,376] confidence=0.95
+[14] type=text text="高性能" bbox=[405,398,445,414] confidence=0.95
+[15] type=text text="最高性能和功耗" bbox=[405,414,476,430] confidence=0.95

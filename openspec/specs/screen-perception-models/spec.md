@@ -1,5 +1,7 @@
-## Requirements
+## Purpose
 
+Define the internal and public perception models used by the screen perception pipeline — `ScreenSnapshot`, `UIElement`, `ScreenState`, `SnapshotResult`, and related types — bridging backend captures to MCP tool responses.
+## Requirements
 ### Requirement: SnapshotResult as public snapshot contract
 
 The system SHALL define a `SnapshotResult` pydantic model that replaces `ScreenSnapshot` as the return type for `screen(action="snapshot")`.
@@ -59,12 +61,17 @@ The existing `UIElement` SHALL be retained as an internal/perception model. The 
 #### Scenario: ParsedElement replaces UIElement in public API
 
 - **WHEN** `AnalysisResult.elements` is populated
-- **THEN** each element SHALL be a `ParsedElement` with fields: `id`, `type` (controlled enum), `bbox`, `text`, `description`, `confidence`, `parent_id`, `children_ids`, `region_ref`
+- **THEN** each element SHALL be a `ParsedElement` with fields: `id`, `type` (controlled enum), `bbox` ([x1,y1,x2,y2]), `text`, `description`, `confidence`, `parent_id`, `children_ids`, `region_ref`
 
 #### Scenario: Minimum viable UIElement
 
 - **WHEN** only element identity is known without position or role
 - **THEN** a `UIElement` with only `id` populated (and all others defaulting to None) SHALL be valid
+
+#### Scenario: UIElement bbox format
+
+- **WHEN** a `UIElement` has a bounding box
+- **THEN** its `bbox` field SHALL be a list of 4 ints in [x1, y1, x2, y2] format
 
 ### Requirement: CursorInfo model with source tracking
 
@@ -84,3 +91,4 @@ The `CursorInfo` model SHALL continue to be used internally. The public `ScreenS
 
 - **WHEN** `XdgPortalBackend` returns a `ScreenSnapshot`
 - **THEN** `cursor.source` MUST be `"tracked"` because Wayland hardware cursor overlay is not composited into screenshots
+

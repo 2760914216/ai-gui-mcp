@@ -1,0 +1,304 @@
+{
+  "snapshot_id": "edge-opencode-zen",
+  "overall_quality": "high",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "browser",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "sidebar",
+        "bbox": [
+          65,
+          194,
+          107,
+          438
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "content",
+        "bbox": [
+          130,
+          194,
+          627,
+          937
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "button",
+      "bbox": [
+        143,
+        260,
+        157,
+        280
+      ],
+      "text": "<",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "text",
+      "bbox": [
+        143,
+        720,
+        173,
+        735
+      ],
+      "text": "使用历史",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "text",
+      "bbox": [
+        143,
+        740,
+        233,
+        755
+      ],
+      "text": "近期 API 使用情况和成本。",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-8",
+      "type": "text",
+      "bbox": [
+        143,
+        785,
+        157,
+        798
+      ],
+      "text": "日期",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-9",
+      "type": "text",
+      "bbox": [
+        272,
+        785,
+        286,
+        798
+      ],
+      "text": "模型",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-10",
+      "type": "text",
+      "bbox": [
+        337,
+        785,
+        351,
+        798
+      ],
+      "text": "输入",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-11",
+      "type": "text",
+      "bbox": [
+        420,
+        785,
+        434,
+        798
+      ],
+      "text": "输出",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-12",
+      "type": "text",
+      "bbox": [
+        485,
+        785,
+        500,
+        798
+      ],
+      "text": "成本",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-13",
+      "type": "text",
+      "bbox": [
+        550,
+        785,
+        564,
+        798
+      ],
+      "text": "会话",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-14",
+      "type": "text",
+      "bbox": [
+        143,
+        815,
+        212,
+        830
+      ],
+      "text": "5月24日 下午12:31",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-15",
+      "type": "text",
+      "bbox": [
+        272,
+        815,
+        298,
+        830
+      ],
+      "text": "gpt-5.4",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "button",
+      "bbox": [
+        175,
+        260,
+        200,
+        280
+      ],
+      "text": "May 2026",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "button",
+      "bbox": [
+        257,
+        260,
+        295,
+        280
+      ],
+      "text": "所有模型",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "button",
+      "bbox": [
+        310,
+        260,
+        348,
+        280
+      ],
+      "text": "所有密钥",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "chart",
+      "bbox": [
+        143,
+        308,
+        626,
+        624
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"element-1\",\n      \"type\": \"button\",\n      \"bbox\": [143, 260, 157, 280],\n      \"text\": \"<\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-2\",\n      \"type\": \"button\",\n      \"bbox\": [175, 260, 200, 280],\n      \"text\": \"May 2026\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [257, 260, 295, 280],\n      \"text\": \"所有模型\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [310, 260, 348, 280],\n      \"text\": \"所有密钥\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"chart\",\n      \"bbox\": [143, 308, 626, 624],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"text\",\n      \"bbox\": [143, 720, 173, 735],\n      \"text\": \"使用历史\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"text\",\n      \"bbox\": [143, 740, 233, 755],\n      \"text\": \"近期 API 使用情况和成本。\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"text\",\n      \"bbox\": [143, 785, 157, 798],\n      \"text\": \"日期\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"text\",\n      \"bbox\": [272, 785, 286, 798],\n      \"text\": \"模型\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"text\",\n      \"bbox\": [337, 785, 351, 798],\n      \"text\": \"输入\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"text\",\n      \"bbox\": [420, 785, 434, 798],\n      \"text\": \"输出\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"text\",\n      \"bbox\": [485, 785, 500, 798],\n      \"text\": \"成本\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"text\",\n      \"bbox\": [550, 785, 564, 798],\n      \"text\": \"会话\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"text\",\n      \"bbox\": [143, 815, 212, 830],\n      \"text\": \"5",
+    "fine_raw_last": "\"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [257, 260, 295, 280],\n      \"text\": \"所有模型\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [310, 260, 348, 280],\n      \"text\": \"所有密钥\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"chart\",\n      \"bbox\": [143, 308, 626, 624],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"text\",\n      \"bbox\": [143, 720, 173, 735],\n      \"text\": \"使用历史\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"text\",\n      \"bbox\": [143, 740, 233, 755],\n      \"text\": \"近期 API 使用情况和成本。\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"text\",\n      \"bbox\": [143, 785, 157, 798],\n      \"text\": \"日期\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"text\",\n      \"bbox\": [272, 785, 286, 798],\n      \"text\": \"模型\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"text\",\n      \"bbox\": [337, 785, 351, 798],\n      \"text\": \"输入\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"text\",\n      \"bbox\": [420, 785, 434, 798],\n      \"text\": \"输出\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"text\",\n      \"bbox\": [485, 785, 500, 798],\n      \"text\": \"成本\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"text\",\n      \"bbox\": [550, 785, 564, 798],\n      \"text\": \"会话\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"text\",\n      \"bbox\": [143, 815, 212, 830],\n      \"text\": \"5月24日 下午12:31\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-15\",\n      \"type\": \"text\",\n      \"bbox\": [272, 815, 298, 830],\n      \"text\": \"gpt-5.4\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-16\",\n      \"type\": \"text\",\n      \"bbox\": [337, 815, 370, 830],\n      \"text\": \"11, 95047\",\n      \"confidence\": 0.98"
+  },
+  "_timing": {
+    "load_s": 3.2,
+    "stage1_s": 3.2,
+    "stage2_s": 21.2,
+    "total_s": 27.6
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/edge-opencode-zen.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

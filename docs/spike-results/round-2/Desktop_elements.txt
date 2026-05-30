@@ -1,0 +1,18 @@
+# Elements for Desktop.png
+# Total: 15
+
+[1] type=icon text="Design_mids" bbox=[14,37,56,118] confidence=0.98
+[2] type=icon text="早川理央_全套大鲷.docx" bbox=[68,37,110,118] confidence=0.97
+[3] type=icon text="misc" bbox=[14,150,56,231] confidence=0.97
+[4] type=icon text="mount_point" bbox=[14,263,56,344] confidence=0.97
+[5] type=icon text="watt" bbox=[14,376,56,457] confidence=0.97
+[6] type=icon text="Win11Shared" bbox=[14,489,56,570] confidence=0.97
+[7] type=icon text="Screenshot_2026-05-07_12-46-19.png" bbox=[122,37,164,118] confidence=0.96
+[8] type=icon text="Watt Toolkit" bbox=[122,150,164,231] confidence=0.96
+[9] type=icon text="ai_image_prompt.md" bbox=[68,263,110,344] confidence=0.96
+[10] type=icon text="最全整理，日语中「は」与「か」...nhtml" bbox=[68,150,110,231] confidence=0.95
+[11] type=icon text="WeChatLinux_x86_64_AppImage" bbox=[122,263,164,344] confidence=0.95
+[12] type=icon text="Companion_Agent_八层架构_v1.pdf" bbox=[68,376,110,457] confidence=0.95
+[13] type=icon bbox=[122,376,164,457] confidence=0.95
+[14] type=icon text="cppreference-zh:20221231.chm" bbox=[68,489,110,570] confidence=0.95
+[15] type=icon bbox=[122,489,164,570] confidence=0.95

@@ -1,5 +1,7 @@
-## Requirements
+## Purpose
 
+Define the structured output models for GUI parsing results — `AnalysisResult`, `ParsedElement`, `LayoutSummary`, `AnalysisWarning`, and related types — consumed by the P3A intelligence layer and returned by `screen(action="analyze")`.
+## Requirements
 ### Requirement: AnalysisResult as P3A primary output
 
 The system SHALL define an `AnalysisResult` pydantic model as the primary structured output of the GUI parser. It SHALL NOT include a top-level `source` field.
@@ -16,7 +18,7 @@ The system SHALL define a `ParsedElement` model with a flat identifier-based hie
 #### Scenario: ParsedElement fields
 
 - **WHEN** a `ParsedElement` is created
-- **THEN** it SHALL have: `id` (str), `type` (controlled enum), `bbox` (list of 4 ints [x,y,w,h]), `text` (str or null), `description` (str or null), `confidence` (float or null), `parent_id` (str or null), `children_ids` (list of str), `region_ref` (str or null)
+- **THEN** it SHALL have: `id` (str), `type` (controlled enum), `bbox` (list of 4 ints [x1,y1,x2,y2]), `text` (str or null), `description` (str or null), `confidence` (float or null), `parent_id` (str or null), `children_ids` (list of str), `region_ref` (str or null)
 
 #### Scenario: Minimum viable element
 
@@ -45,7 +47,7 @@ The system SHALL define a `LayoutSummary` model providing a high-level character
 #### Scenario: LayoutRegion fields
 
 - **WHEN** a `LayoutRegion` is created
-- **THEN** it SHALL contain: `id` (str), `type` (one of: `sidebar`, `toolbar`, `editor`, `content`, `dialog`, `panel`, `list`, `table`, `form`, `unknown`), `bbox` (list of 4 ints), `detail` (str or null)
+- **THEN** it SHALL contain: `id` (str), `type` (one of: `sidebar`, `toolbar`, `editor`, `content`, `dialog`, `panel`, `list`, `table`, `form`, `unknown`), `bbox` (list of 4 ints [x1,y1,x2,y2]), `detail` (str or null)
 
 #### Scenario: ActiveDialog detection
 
@@ -65,7 +67,7 @@ The system SHALL use structured `AnalysisWarning` objects rather than plain text
 #### Scenario: Warning code enumeration
 
 - **WHEN** a `warning.code` is set
-- **THEN** it MUST be one of: `image_unavailable`, `provider_timeout`, `dense_ui_possible_misses`, `ocr_low_confidence`, `partial_parse`, `unsupported_layout`, `low_visibility_elements`
+- **THEN** it MUST be one of: `image_unavailable`, `provider_timeout`, `dense_ui_possible_misses`, `ocr_low_confidence`, `partial_parse`, `unsupported_layout`, `low_visibility_elements`, `duplicate_element`, `hallucinated_element`, `model_parse_error`
 
 ### Requirement: Best-effort parsing with quality indicators
 
@@ -106,3 +108,20 @@ The system SHALL define a `ScreenState` model for `size` and `cursor` queries, i
 - **WHEN** `screen(action="cursor")` is called
 - **THEN** the response SHALL contain `cursor_x`, `cursor_y`, and `cursor_source` fields
 - **AND** `cursor_source` SHALL be `"tracked"` on Wayland/COSMIC
+
+### Requirement: Post-processing deduplication by IoU
+
+The system SHOULD detect and remove duplicate elements from VLM output. Two elements SHALL be considered duplicates when their bbox IoU (Intersection over Union) exceeds 0.5.
+
+#### Scenario: Duplicate elements with different confidence
+
+- **WHEN** two ParsedElements have IoU > 0.5
+- **THEN** the element with lower confidence SHALL be removed from the elements list
+- **AND** a warning with code `duplicate_element` SHALL be added
+
+#### Scenario: Duplicate elements with equal confidence
+
+- **WHEN** two ParsedElements have IoU > 0.5 and equal confidence
+- **THEN** the element appearing later in the list SHALL be removed
+- **AND** a warning with code `duplicate_element` SHALL be added
+

@@ -1,0 +1,315 @@
+{
+  "snapshot_id": "Desktop",
+  "overall_quality": "high",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "unknown",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "desktop_background",
+        "type": "unknown",
+        "bbox": [
+          0,
+          0,
+          999,
+          999
+        ],
+        "detail": null
+      },
+      {
+        "id": "taskbar",
+        "type": "unknown",
+        "bbox": [
+          234,
+          945,
+          768,
+          999
+        ],
+        "detail": null
+      },
+      {
+        "id": "desktop_icons",
+        "type": "unknown",
+        "bbox": [
+          0,
+          0,
+          150,
+          945
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "icon",
+      "bbox": [
+        14,
+        37,
+        56,
+        118
+      ],
+      "text": "Design_mids",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "icon",
+      "bbox": [
+        68,
+        37,
+        110,
+        118
+      ],
+      "text": "早川理央_全套大鲷.docx",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "icon",
+      "bbox": [
+        14,
+        150,
+        56,
+        231
+      ],
+      "text": "misc",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "icon",
+      "bbox": [
+        14,
+        263,
+        56,
+        344
+      ],
+      "text": "mount_point",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-10",
+      "type": "icon",
+      "bbox": [
+        14,
+        376,
+        56,
+        457
+      ],
+      "text": "watt",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-13",
+      "type": "icon",
+      "bbox": [
+        14,
+        489,
+        56,
+        570
+      ],
+      "text": "Win11Shared",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "icon",
+      "bbox": [
+        122,
+        37,
+        164,
+        118
+      ],
+      "text": "Screenshot_2026-05-07_12-46-19.png",
+      "description": null,
+      "confidence": 0.96,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "icon",
+      "bbox": [
+        122,
+        150,
+        164,
+        231
+      ],
+      "text": "Watt Toolkit",
+      "description": null,
+      "confidence": 0.96,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-8",
+      "type": "icon",
+      "bbox": [
+        68,
+        263,
+        110,
+        344
+      ],
+      "text": "ai_image_prompt.md",
+      "description": null,
+      "confidence": 0.96,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "icon",
+      "bbox": [
+        68,
+        150,
+        110,
+        231
+      ],
+      "text": "最全整理，日语中「は」与「か」...nhtml",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-9",
+      "type": "icon",
+      "bbox": [
+        122,
+        263,
+        164,
+        344
+      ],
+      "text": "WeChatLinux_x86_64_AppImage",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-11",
+      "type": "icon",
+      "bbox": [
+        68,
+        376,
+        110,
+        457
+      ],
+      "text": "Companion_Agent_八层架构_v1.pdf",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-12",
+      "type": "icon",
+      "bbox": [
+        122,
+        376,
+        164,
+        457
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-14",
+      "type": "icon",
+      "bbox": [
+        68,
+        489,
+        110,
+        570
+      ],
+      "text": "cppreference-zh:20221231.chm",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-15",
+      "type": "icon",
+      "bbox": [
+        122,
+        489,
+        164,
+        570
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"desktop-icon-1\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 37, 56, 118],\n      \"text\": \"Design_mids\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"desktop-icon-2\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 37, 110, 118],\n      \"text\": \"早川理央_全套大鲷.docx\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-3\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 37, 164, 118],\n      \"text\": \"Screenshot_2026-05-07_12-46-19.png\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"desktop-icon-4\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 150, 56, 231],\n      \"text\": \"misc\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-5\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 150, 110, 231],\n      \"text\": \"最全整理，日语中「は」与「か」...nhtml\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-6\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 150, 164, 231],\n      \"text\": \"Watt Toolkit\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"desktop-icon-7\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 263, 56, 344],\n      \"text\": \"mount_point\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-8\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 263, 110, 344],\n      \"text\": \"ai_image_prompt.md\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"desktop-icon-9\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 263, 164, 344],\n      \"text\": \"WeChatLinux_x86_64_AppImage\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-10\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 376, 56, 457],\n      \"text\": \"watt\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-11\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 376, 110, 457],\n      \"text\": \"Companion_Agent_八层架构_v1.pdf\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-12\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 376, 164, 457],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-13\",\n      \"type\": \"icon\",\n      \"bbox\": ",
+    "fine_raw_last": "    \"text\": \"Screenshot_2026-05-07_12-46-19.png\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"desktop-icon-4\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 150, 56, 231],\n      \"text\": \"misc\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-5\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 150, 110, 231],\n      \"text\": \"最全整理，日语中「は」与「か」...nhtml\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-6\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 150, 164, 231],\n      \"text\": \"Watt Toolkit\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"desktop-icon-7\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 263, 56, 344],\n      \"text\": \"mount_point\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-8\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 263, 110, 344],\n      \"text\": \"ai_image_prompt.md\",\n      \"confidence\": 0.96\n    },\n    {\n      \"id\": \"desktop-icon-9\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 263, 164, 344],\n      \"text\": \"WeChatLinux_x86_64_AppImage\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-10\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 376, 56, 457],\n      \"text\": \"watt\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-11\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 376, 110, 457],\n      \"text\": \"Companion_Agent_八层架构_v1.pdf\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-12\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 376, 164, 457],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-13\",\n      \"type\": \"icon\",\n      \"bbox\": [14, 489, 56, 570],\n      \"text\": \"Win11Shared\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"desktop-icon-14\",\n      \"type\": \"icon\",\n      \"bbox\": [68, 489, 110, 570],\n      \"text\": \"cppreference-zh:20221231.chm\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon-15\",\n      \"type\": \"icon\",\n      \"bbox\": [122, 489, 164, 570],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"desktop-icon"
+  },
+  "_timing": {
+    "load_s": 3.1,
+    "stage1_s": 3.8,
+    "stage2_s": 20.6,
+    "total_s": 27.7
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/Desktop.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

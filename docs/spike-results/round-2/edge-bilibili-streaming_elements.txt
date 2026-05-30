@@ -1,0 +1,12 @@
+# Elements for edge-bilibili-streaming.png
+# Total: 9
+
+[1] type=button text="1.3万" bbox=[67,883,104,915] confidence=0.98
+[2] type=button text="840" bbox=[124,883,161,915] confidence=0.98
+[3] type=button text="2699" bbox=[181,883,218,915] confidence=0.98
+[4] type=button text="1251" bbox=[238,883,275,915] confidence=0.98
+[5] type=button text="28人正在看" bbox=[67,838,104,869] confidence=0.98
+[6] type=button text="100" bbox=[124,838,161,869] confidence=0.98
+[7] type=button text="100" bbox=[181,838,218,869] confidence=0.98
+[8] type=button text="100" bbox=[238,838,275,869] confidence=0.98
+[9] type=button text="28人正在看" bbox=[67,838,275,869] confidence=0.98

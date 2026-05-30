@@ -1,0 +1,1147 @@
+{
+  "snapshot_id": "vscode",
+  "overall_quality": "high",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "ide",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "sidebar",
+        "bbox": [
+          0,
+          37,
+          168,
+          945
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "editor",
+        "bbox": [
+          168,
+          37,
+          999,
+          527
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-3",
+        "type": "panel",
+        "bbox": [
+          168,
+          527,
+          999,
+          945
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "text",
+      "bbox": [
+        473,
+        0,
+        516,
+        18
+      ],
+      "text": "5月24日 19:48",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "text",
+      "bbox": [
+        747,
+        0,
+        807,
+        18
+      ],
+      "text": "cn | altrg-pinyin",
+      "description": null,
+      "confidence": 0.97,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "button",
+      "bbox": [
+        960,
+        0,
+        980,
+        18
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "button",
+      "bbox": [
+        939,
+        0,
+        959,
+        18
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "button",
+      "bbox": [
+        919,
+        0,
+        939,
+        18
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "button",
+      "bbox": [
+        899,
+        0,
+        919,
+        18
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "button",
+      "bbox": [
+        879,
+        0,
+        899,
+        18
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-8",
+      "type": "button",
+      "bbox": [
+        859,
+        0,
+        879,
+        18
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-9",
+      "type": "button",
+      "bbox": [
+        839,
+        0,
+        859,
+        18
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-10",
+      "type": "button",
+      "bbox": [
+        960,
+        18,
+        980,
+        36
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-11",
+      "type": "button",
+      "bbox": [
+        939,
+        18,
+        959,
+        36
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-12",
+      "type": "button",
+      "bbox": [
+        919,
+        18,
+        939,
+        36
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-13",
+      "type": "button",
+      "bbox": [
+        899,
+        18,
+        919,
+        36
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-14",
+      "type": "button",
+      "bbox": [
+        879,
+        18,
+        899,
+        36
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-15",
+      "type": "button",
+      "bbox": [
+        859,
+        18,
+        879,
+        36
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-16",
+      "type": "button",
+      "bbox": [
+        839,
+        18,
+        859,
+        36
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-17",
+      "type": "button",
+      "bbox": [
+        960,
+        36,
+        980,
+        54
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-18",
+      "type": "button",
+      "bbox": [
+        939,
+        36,
+        959,
+        54
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-19",
+      "type": "button",
+      "bbox": [
+        919,
+        36,
+        939,
+        54
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-20",
+      "type": "button",
+      "bbox": [
+        899,
+        36,
+        919,
+        54
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-21",
+      "type": "button",
+      "bbox": [
+        879,
+        36,
+        899,
+        54
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-22",
+      "type": "button",
+      "bbox": [
+        859,
+        36,
+        879,
+        54
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-23",
+      "type": "button",
+      "bbox": [
+        839,
+        36,
+        859,
+        54
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-24",
+      "type": "button",
+      "bbox": [
+        960,
+        54,
+        980,
+        72
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-25",
+      "type": "button",
+      "bbox": [
+        939,
+        54,
+        959,
+        72
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-26",
+      "type": "button",
+      "bbox": [
+        919,
+        54,
+        939,
+        72
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-27",
+      "type": "button",
+      "bbox": [
+        899,
+        54,
+        919,
+        72
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-28",
+      "type": "button",
+      "bbox": [
+        879,
+        54,
+        899,
+        72
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-29",
+      "type": "button",
+      "bbox": [
+        859,
+        54,
+        879,
+        72
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-30",
+      "type": "button",
+      "bbox": [
+        839,
+        54,
+        859,
+        72
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-31",
+      "type": "button",
+      "bbox": [
+        960,
+        72,
+        980,
+        90
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-32",
+      "type": "button",
+      "bbox": [
+        939,
+        72,
+        959,
+        90
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-33",
+      "type": "button",
+      "bbox": [
+        919,
+        72,
+        939,
+        90
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-34",
+      "type": "button",
+      "bbox": [
+        899,
+        72,
+        919,
+        90
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-35",
+      "type": "button",
+      "bbox": [
+        879,
+        72,
+        899,
+        90
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-36",
+      "type": "button",
+      "bbox": [
+        859,
+        72,
+        879,
+        90
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-37",
+      "type": "button",
+      "bbox": [
+        839,
+        72,
+        859,
+        90
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-38",
+      "type": "button",
+      "bbox": [
+        960,
+        90,
+        980,
+        108
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-39",
+      "type": "button",
+      "bbox": [
+        939,
+        90,
+        959,
+        108
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-40",
+      "type": "button",
+      "bbox": [
+        919,
+        90,
+        939,
+        108
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-41",
+      "type": "button",
+      "bbox": [
+        899,
+        90,
+        919,
+        108
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-42",
+      "type": "button",
+      "bbox": [
+        879,
+        90,
+        899,
+        108
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-43",
+      "type": "button",
+      "bbox": [
+        859,
+        90,
+        879,
+        108
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-44",
+      "type": "button",
+      "bbox": [
+        839,
+        90,
+        859,
+        108
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-45",
+      "type": "button",
+      "bbox": [
+        960,
+        108,
+        980,
+        126
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-46",
+      "type": "button",
+      "bbox": [
+        939,
+        108,
+        959,
+        126
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-47",
+      "type": "button",
+      "bbox": [
+        919,
+        108,
+        939,
+        126
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-48",
+      "type": "button",
+      "bbox": [
+        899,
+        108,
+        919,
+        126
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-49",
+      "type": "button",
+      "bbox": [
+        879,
+        108,
+        899,
+        126
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-50",
+      "type": "button",
+      "bbox": [
+        859,
+        108,
+        879,
+        126
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-51",
+      "type": "button",
+      "bbox": [
+        839,
+        108,
+        859,
+        126
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-52",
+      "type": "button",
+      "bbox": [
+        960,
+        126,
+        980,
+        144
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-53",
+      "type": "button",
+      "bbox": [
+        939,
+        126,
+        959,
+        144
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-54",
+      "type": "button",
+      "bbox": [
+        919,
+        126,
+        939,
+        144
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-55",
+      "type": "button",
+      "bbox": [
+        899,
+        126,
+        919,
+        144
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-56",
+      "type": "button",
+      "bbox": [
+        879,
+        126,
+        899,
+        144
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-57",
+      "type": "button",
+      "bbox": [
+        859,
+        126,
+        879,
+        144
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-58",
+      "type": "button",
+      "bbox": [
+        839,
+        126,
+        859,
+        144
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-59",
+      "type": "button",
+      "bbox": [
+        960,
+        144,
+        980,
+        162
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-60",
+      "type": "button",
+      "bbox": [
+        939,
+        144,
+        959,
+        162
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-61",
+      "type": "button",
+      "bbox": [
+        919,
+        144,
+        939,
+        162
+      ],
+      "text": "—",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-62",
+      "type": "button",
+      "bbox": [
+        899,
+        144,
+        919,
+        162
+      ],
+      "text": "+",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-63",
+      "type": "button",
+      "bbox": [
+        879,
+        144,
+        899,
+        162
+      ],
+      "text": "Minimize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-64",
+      "type": "button",
+      "bbox": [
+        859,
+        144,
+        879,
+        162
+      ],
+      "text": "Maximize",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-65",
+      "type": "button",
+      "bbox": [
+        839,
+        144,
+        859,
+        162
+      ],
+      "text": "Close",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-66",
+      "type": "button",
+      "bbox": [
+        960,
+        162,
+        980,
+        180
+      ],
+      "text": "X",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-67",
+      "type": "button",
+      "bbox": [
+        939,
+        162,
+        959,
+        180
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"element-1\",\n      \"type\": \"text\",\n      \"bbox\": [473, 0, 516, 18],\n      \"text\": \"5月24日 19:48\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-2\",\n      \"type\": \"text\",\n      \"bbox\": [747, 0, 807, 18],\n      \"text\": \"cn | altrg-pinyin\",\n      \"confidence\": 0.97\n    },\n    {\n      \"id\": \"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [960, 0, 980, 18],\n      \"text\": \"X\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [939, 0, 959, 18],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [919, 0, 939, 18],\n      \"text\": \"—\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"button\",\n      \"bbox\": [899, 0, 919, 18],\n      \"text\": \"+\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"button\",\n      \"bbox\": [879, 0, 899, 18],\n      \"text\": \"Minimize\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"button\",\n      \"bbox\": [859, 0, 879, 18],\n      \"text\": \"Maximize\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"button\",\n      \"bbox\": [839, 0, 859, 18],\n      \"text\": \"Close\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"button\",\n      \"bbox\": [960, 18, 980, 36],\n      \"text\": \"X\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"button\",\n      \"bbox\": [939, 18, 959, 36],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"button\",\n      \"bbox\": [919, 18, 939, 36],\n      \"text\": \"—\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"button\",\n      \"bbox\": [899, 18, 919, 36],\n      \"text\": \"+\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"button\",\n      \"bbox\": [879, 18, 899, 36],\n      \"text\": \"Minimize\",\n   ",
+    "fine_raw_last": " 144],\n      \"text\": \"—\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-55\",\n      \"type\": \"button\",\n      \"bbox\": [899, 126, 919, 144],\n      \"text\": \"+\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-56\",\n      \"type\": \"button\",\n      \"bbox\": [879, 126, 899, 144],\n      \"text\": \"Minimize\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-57\",\n      \"type\": \"button\",\n      \"bbox\": [859, 126, 879, 144],\n      \"text\": \"Maximize\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-58\",\n      \"type\": \"button\",\n      \"bbox\": [839, 126, 859, 144],\n      \"text\": \"Close\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-59\",\n      \"type\": \"button\",\n      \"bbox\": [960, 144, 980, 162],\n      \"text\": \"X\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-60\",\n      \"type\": \"button\",\n      \"bbox\": [939, 144, 959, 162],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-61\",\n      \"type\": \"button\",\n      \"bbox\": [919, 144, 939, 162],\n      \"text\": \"—\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-62\",\n      \"type\": \"button\",\n      \"bbox\": [899, 144, 919, 162],\n      \"text\": \"+\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-63\",\n      \"type\": \"button\",\n      \"bbox\": [879, 144, 899, 162],\n      \"text\": \"Minimize\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-64\",\n      \"type\": \"button\",\n      \"bbox\": [859, 144, 879, 162],\n      \"text\": \"Maximize\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-65\",\n      \"type\": \"button\",\n      \"bbox\": [839, 144, 859, 162],\n      \"text\": \"Close\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-66\",\n      \"type\": \"button\",\n      \"bbox\": [960, 162, 980, 180],\n      \"text\": \"X\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-67\",\n      \"type\": \"button\",\n      \"bbox\": [939, 162, 959, 180],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-68\",\n      \"type\": \""
+  },
+  "_timing": {
+    "load_s": 3.4,
+    "stage1_s": 3.9,
+    "stage2_s": 85.7,
+    "total_s": 93.1
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/vscode.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 4096
+  }
+}

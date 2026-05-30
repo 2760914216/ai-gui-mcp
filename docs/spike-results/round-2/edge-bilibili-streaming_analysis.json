@@ -1,0 +1,250 @@
+{
+  "snapshot_id": "edge-bilibili-streaming",
+  "overall_quality": "low",
+  "warnings": [
+    {
+      "code": "duplicate_element",
+      "severity": "low",
+      "message": "Element element-10 duplicates element-9 (IoU > 0.5), removed"
+    },
+    {
+      "code": "duplicate_element",
+      "severity": "low",
+      "message": "Element element-11 duplicates element-9 (IoU > 0.5), removed"
+    },
+    {
+      "code": "duplicate_element",
+      "severity": "low",
+      "message": "Element element-12 duplicates element-9 (IoU > 0.5), removed"
+    },
+    {
+      "code": "duplicate_element",
+      "severity": "low",
+      "message": "Element element-13 duplicates element-9 (IoU > 0.5), removed"
+    },
+    {
+      "code": "duplicate_element",
+      "severity": "low",
+      "message": "Element element-14 duplicates element-9 (IoU > 0.5), removed"
+    },
+    {
+      "code": "duplicate_element",
+      "severity": "low",
+      "message": "Element element-15 duplicates element-9 (IoU > 0.5), removed"
+    }
+  ],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "browser",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "content",
+        "bbox": [
+          67,
+          249,
+          705,
+          835
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "sidebar",
+        "bbox": [
+          705,
+          168,
+          950,
+          835
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-3",
+        "type": "toolbar",
+        "bbox": [
+          0,
+          12,
+          999,
+          124
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "button",
+      "bbox": [
+        67,
+        883,
+        104,
+        915
+      ],
+      "text": "1.3万",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "button",
+      "bbox": [
+        124,
+        883,
+        161,
+        915
+      ],
+      "text": "840",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "button",
+      "bbox": [
+        181,
+        883,
+        218,
+        915
+      ],
+      "text": "2699",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "button",
+      "bbox": [
+        238,
+        883,
+        275,
+        915
+      ],
+      "text": "1251",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "button",
+      "bbox": [
+        67,
+        838,
+        104,
+        869
+      ],
+      "text": "28人正在看",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "button",
+      "bbox": [
+        124,
+        838,
+        161,
+        869
+      ],
+      "text": "100",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "button",
+      "bbox": [
+        181,
+        838,
+        218,
+        869
+      ],
+      "text": "100",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-8",
+      "type": "button",
+      "bbox": [
+        238,
+        838,
+        275,
+        869
+      ],
+      "text": "100",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-9",
+      "type": "button",
+      "bbox": [
+        67,
+        838,
+        275,
+        869
+      ],
+      "text": "28人正在看",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"element-1\",\n      \"type\": \"button\",\n      \"bbox\": [67, 883, 104, 915],\n      \"text\": \"1.3万\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-2\",\n      \"type\": \"button\",\n      \"bbox\": [124, 883, 161, 915],\n      \"text\": \"840\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [181, 883, 218, 915],\n      \"text\": \"2699\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [238, 883, 275, 915],\n      \"text\": \"1251\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 104, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"button\",\n      \"bbox\": [124, 838, 161, 869],\n      \"text\": \"100\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"button\",\n      \"bbox\": [181, 838, 218, 869],\n      \"text\": \"100\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"button\",\n      \"bbox\": [238, 838, 275, 869],\n      \"text\": \"100\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275,",
+    "fine_raw_last": ": \"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [181, 883, 218, 915],\n      \"text\": \"2699\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [238, 883, 275, 915],\n      \"text\": \"1251\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 104, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"button\",\n      \"bbox\": [124, 838, 161, 869],\n      \"text\": \"100\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"button\",\n      \"bbox\": [181, 838, 218, 869],\n      \"text\": \"100\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"button\",\n      \"bbox\": [238, 838, 275, 869],\n      \"text\": \"100\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-15\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-16\",\n      \"type\": \"button\",\n      \"bbox\": [67, 838, 275, 869],\n      \"text\": \"28人正在看\",\n     "
+  },
+  "_timing": {
+    "load_s": 3.1,
+    "stage1_s": 3.9,
+    "stage2_s": 20.7,
+    "total_s": 27.9
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/edge-bilibili-streaming.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

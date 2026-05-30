@@ -1,0 +1,18 @@
+# Elements for edge-opencode-zen.png
+# Total: 15
+
+[1] type=button text="<" bbox=[143,260,157,280] confidence=0.98
+[2] type=text text="使用历史" bbox=[143,720,173,735] confidence=0.98
+[3] type=text text="近期 API 使用情况和成本。" bbox=[143,740,233,755] confidence=0.98
+[4] type=text text="日期" bbox=[143,785,157,798] confidence=0.98
+[5] type=text text="模型" bbox=[272,785,286,798] confidence=0.98
+[6] type=text text="输入" bbox=[337,785,351,798] confidence=0.98
+[7] type=text text="输出" bbox=[420,785,434,798] confidence=0.98
+[8] type=text text="成本" bbox=[485,785,500,798] confidence=0.98
+[9] type=text text="会话" bbox=[550,785,564,798] confidence=0.98
+[10] type=text text="5月24日 下午12:31" bbox=[143,815,212,830] confidence=0.98
+[11] type=text text="gpt-5.4" bbox=[272,815,298,830] confidence=0.98
+[12] type=button text="May 2026" bbox=[175,260,200,280] confidence=0.97
+[13] type=button text="所有模型" bbox=[257,260,295,280] confidence=0.97
+[14] type=button text="所有密钥" bbox=[310,260,348,280] confidence=0.97
+[15] type=chart bbox=[143,308,626,624] confidence=0.95

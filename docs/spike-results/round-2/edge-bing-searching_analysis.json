@@ -1,0 +1,63 @@
+{
+  "snapshot_id": "edge-bing-searching",
+  "overall_quality": "medium",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "browser",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "toolbar",
+        "bbox": [
+          0,
+          0,
+          997,
+          134
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "content",
+        "bbox": [
+          85,
+          136,
+          670,
+          936
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n[\n  {\n    \"id\": \"element-1\",\n    \"type\": \"button\",\n    \"bbox\": [87, 134, 136, 155],\n    \"text\": \"网页版\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-2\",\n    \"type\": \"button\",\n    \"bbox\": [117, 134, 147, 155],\n    \"text\": \"国际版\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-3\",\n \"type\": \"button\",\n    \"bbox\": [85, 163, 103, 185],\n    \"text\": \"翻译\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-4\",\n    \"type\": \"button\",\n    \"bbox\": [375, 163, 393, 185],\n    \"text\": \"\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-5\",\n    \"type\": \"button\",\n    \"bbox\": [78, 208, 100, 228],\n    \"text\": \"网页\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-6\",\n    \"type\": \"button\",\n    \"bbox\": [108, 208, 128, 228],\n    \"text\": \"图片\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-7\",\n    \"type\": \"button\",\n    \"bbox\": [138, 208, 158, 228],\n    \"text\": \"视频\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-8\",\n    \"type\": \"button\",\n    \"bbox\": [168, 208, 188, 228],\n    \"text\": \"学术\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-9\",\n    \"type\": \"button\",\n    \"bbox\": [198, 208, 218, 228],\n    \"text\": \"词典\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-10\",\n    \"type\": \"button\",\n    \"bbox\": [228, 208, 248, 228],\n    \"text\": \"地图\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-11\",\n    \"type\": \"button\",\n    \"bbox\": [258, 208, 280, 228],\n    \"text\": \"更多\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-12\",\n    \"type\": \"button\",\n    \"bbox\": [90, 270, 220, 292],\n    \"text\": \"英语\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-13\",\n    \"type\": \"button\",\n    \"bbox\": [230, 270, 250, 292],\n    \"text\": \"中英(简体)\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-14\",\n    \"type\": \"button\",\n    \"bbox\": [200, 325, 220, 345],\n    \"text\": \"X\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-15\",\n    \"type\": \"button\",\n    \"bbox\": [230, 325, 250, 345],\n    \"text\": \"X\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-16\",\n    \"type\": \"button\",\n    ",
+    "fine_raw_last": " \"element-2\",\n    \"type\": \"button\",\n    \"bbox\": [117, 134, 147, 155],\n    \"text\": \"国际版\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-3\",\n \"type\": \"button\",\n    \"bbox\": [85, 163, 103, 185],\n    \"text\": \"翻译\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-4\",\n    \"type\": \"button\",\n    \"bbox\": [375, 163, 393, 185],\n    \"text\": \"\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-5\",\n    \"type\": \"button\",\n    \"bbox\": [78, 208, 100, 228],\n    \"text\": \"网页\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-6\",\n    \"type\": \"button\",\n    \"bbox\": [108, 208, 128, 228],\n    \"text\": \"图片\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-7\",\n    \"type\": \"button\",\n    \"bbox\": [138, 208, 158, 228],\n    \"text\": \"视频\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-8\",\n    \"type\": \"button\",\n    \"bbox\": [168, 208, 188, 228],\n    \"text\": \"学术\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-9\",\n    \"type\": \"button\",\n    \"bbox\": [198, 208, 218, 228],\n    \"text\": \"词典\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-10\",\n    \"type\": \"button\",\n    \"bbox\": [228, 208, 248, 228],\n    \"text\": \"地图\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-11\",\n    \"type\": \"button\",\n    \"bbox\": [258, 208, 280, 228],\n    \"text\": \"更多\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-12\",\n    \"type\": \"button\",\n    \"bbox\": [90, 270, 220, 292],\n    \"text\": \"英语\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-13\",\n    \"type\": \"button\",\n    \"bbox\": [230, 270, 250, 292],\n    \"text\": \"中英(简体)\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-14\",\n    \"type\": \"button\",\n    \"bbox\": [200, 325, 220, 345],\n    \"text\": \"X\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-15\",\n    \"type\": \"button\",\n    \"bbox\": [230, 325, 250, 345],\n    \"text\": \"X\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-16\",\n    \"type\": \"button\",\n    \"bbox\": [85, 550, 105, 570],\n    \"text\": \"\",\n    \"confidence\": 0.98\n  },\n  {\n    \"id\": \"element-17\",\n    \"type\": \"button\",\n    \"bbox\": [105, 550, 125, 5"
+  },
+  "_timing": {
+    "load_s": 3.1,
+    "stage1_s": 3.1,
+    "stage2_s": 20.8,
+    "total_s": 27.1
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/edge-bing-searching.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}

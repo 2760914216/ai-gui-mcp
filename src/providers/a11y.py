@@ -7,7 +7,7 @@ class A11yNode:
     id: str
     role: str
     name: str = ""
-    bbox: list[int] = field(default_factory=lambda: [0, 0, 0, 0])
+    bbox: list[int] = field(default_factory=lambda: [0, 0, 0, 0])  # [x1, y1, x2, y2]
     children: list["A11yNode"] = field(default_factory=list)
 
 

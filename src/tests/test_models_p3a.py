@@ -239,13 +239,13 @@ class TestLayoutRegion:
             LayoutRegion(id="r", type="header", bbox=[0, 0, 100, 100])
 
     def test_bbox_four_ints(self):
-        region = LayoutRegion(id="r", type="content", bbox=[10, 20, 800, 600])
+        region = LayoutRegion(id="r", type="content", bbox=[10, 20, 810, 620])
         assert len(region.bbox) == 4
         assert all(isinstance(v, int) for v in region.bbox)
 
     def test_detail_with_value(self):
         region = LayoutRegion(
-            id="r", type="editor", bbox=[300, 0, 1200, 1080],
+            id="r", type="editor", bbox=[300, 0, 1500, 1080],
             detail="Main code editor area",
         )
         assert region.detail == "Main code editor area"
@@ -295,7 +295,7 @@ class TestLayoutSummary:
     def test_valid_creation_with_regions(self):
         regions = [
             LayoutRegion(id="r1", type="sidebar", bbox=[0, 0, 300, 1080]),
-            LayoutRegion(id="r2", type="editor", bbox=[300, 0, 1200, 1080]),
+            LayoutRegion(id="r2", type="editor", bbox=[300, 0, 1500, 1080]),
         ]
         summary = LayoutSummary(
             screen_kind=ScreenKind(kind="ide", detail="VS Code"),
@@ -315,10 +315,10 @@ class TestLayoutSummary:
 
 class TestParsedElement:
     def test_minimum_viable_element(self):
-        elem = ParsedElement(id="e1", type="button", bbox=[10, 20, 100, 30])
+        elem = ParsedElement(id="e1", type="button", bbox=[10, 20, 110, 50])
         assert elem.id == "e1"
         assert elem.type == "button"
-        assert elem.bbox == [10, 20, 100, 30]
+        assert elem.bbox == [10, 20, 110, 50]
         assert elem.text is None
         assert elem.description is None
         assert elem.confidence is None
@@ -330,7 +330,7 @@ class TestParsedElement:
         elem = ParsedElement(
             id="e2",
             type="input",
-            bbox=[50, 60, 200, 30],
+            bbox=[50, 60, 250, 90],
             text="Search...",
             description="Main search input",
             confidence=0.92,
@@ -382,7 +382,7 @@ class TestAnalysisResult:
         warning = AnalysisWarning(
             code="ocr_low_confidence", severity="medium", message="Low OCR"
         )
-        elem = ParsedElement(id="btn1", type="button", bbox=[10, 20, 80, 30])
+        elem = ParsedElement(id="btn1", type="button", bbox=[10, 20, 90, 50])
         region = LayoutRegion(id="r1", type="toolbar", bbox=[0, 0, 1920, 50])
         layout = LayoutSummary(
             screen_kind=ScreenKind(kind="browser"),

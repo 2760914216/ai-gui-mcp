@@ -34,7 +34,7 @@ class TestScreenSnapshotModel:
         assert snap.note is None
 
     def test_valid_accessibility_snapshot(self):
-        elem = UIElement(id="btn1", role="push_button", name="OK", bbox=[10, 20, 100, 30])
+        elem = UIElement(id="btn1", role="push_button", name="OK", bbox=[10, 20, 110, 50])
         snap = ScreenSnapshot(
             screen=ScreenInfo(width=1920, height=1080),
             cursor=CursorInfo(x=50, y=50, source="tracked"),

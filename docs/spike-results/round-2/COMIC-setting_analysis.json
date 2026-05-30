@@ -1,0 +1,304 @@
+{
+  "snapshot_id": "COMIC-setting",
+  "overall_quality": "high",
+  "warnings": [],
+  "layout_summary": {
+    "screen_kind": {
+      "kind": "settings",
+      "detail": null
+    },
+    "main_regions": [
+      {
+        "id": "region-1",
+        "type": "panel",
+        "bbox": [
+          245,
+          139,
+          748,
+          736
+        ],
+        "detail": null
+      },
+      {
+        "id": "region-2",
+        "type": "sidebar",
+        "bbox": [
+          245,
+          139,
+          388,
+          736
+        ],
+        "detail": null
+      }
+    ],
+    "active_dialog": {
+      "present": false,
+      "region_ref": null,
+      "element_ref": null
+    },
+    "notes": null
+  },
+  "elements": [
+    {
+      "id": "element-1",
+      "type": "window",
+      "bbox": [
+        246,
+        138,
+        752,
+        744
+      ],
+      "text": "电源与电池",
+      "description": null,
+      "confidence": 0.98,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-2",
+      "type": "button",
+      "bbox": [
+        246,
+        144,
+        274,
+        172
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-3",
+      "type": "button",
+      "bbox": [
+        274,
+        144,
+        296,
+        172
+      ],
+      "text": null,
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-4",
+      "type": "button",
+      "bbox": [
+        693,
+        148,
+        710,
+        168
+      ],
+      "text": "-",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-5",
+      "type": "button",
+      "bbox": [
+        710,
+        148,
+        726,
+        168
+      ],
+      "text": "×",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-6",
+      "type": "menu",
+      "bbox": [
+        246,
+        172,
+        388,
+        528
+      ],
+      "text": "网络与无线\\n蓝牙\\n无障碍\\n桌面\\n显示\\n声音\\n电源与电池\\n输入设备\\n应用程序\\n时间与语言\\n系统与账户",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-7",
+      "type": "text",
+      "bbox": [
+        405,
+        172,
+        485,
+        200
+      ],
+      "text": "电源与电池",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-8",
+      "type": "text",
+      "bbox": [
+        405,
+        232,
+        485,
+        250
+      ],
+      "text": "电池 91% (21 分钟后充满)",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-9",
+      "type": "text",
+      "bbox": [
+        405,
+        272,
+        438,
+        288
+      ],
+      "text": "电源模式",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-10",
+      "type": "text",
+      "bbox": [
+        405,
+        300,
+        476,
+        316
+      ],
+      "text": "延长电池续航",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-11",
+      "type": "text",
+      "bbox": [
+        405,
+        316,
+        496,
+        332
+      ],
+      "text": "降低功耗并保持静音运行",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-12",
+      "type": "text",
+      "bbox": [
+        405,
+        344,
+        445,
+        360
+      ],
+      "text": "节能",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-13",
+      "type": "text",
+      "bbox": [
+        405,
+        360,
+        488,
+        376
+      ],
+      "text": "静音运行和适中的功耗",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-14",
+      "type": "text",
+      "bbox": [
+        405,
+        398,
+        445,
+        414
+      ],
+      "text": "高性能",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    },
+    {
+      "id": "element-15",
+      "type": "text",
+      "bbox": [
+        405,
+        414,
+        476,
+        430
+      ],
+      "text": "最高性能和功耗",
+      "description": null,
+      "confidence": 0.95,
+      "parent_id": null,
+      "children_ids": [],
+      "region_ref": null
+    }
+  ],
+  "_raw_outputs": {
+    "fine_raw_first": "```json\n{\n  \"elements\": [\n    {\n      \"id\": \"element-1\",\n      \"type\": \"window\",\n      \"bbox\": [246, 138, 752, 744],\n      \"text\": \"电源与电池\",\n      \"confidence\": 0.98\n    },\n    {\n      \"id\": \"element-2\",\n      \"type\": \"button\",\n      \"bbox\": [246, 144, 274, 172],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-3\",\n      \"type\": \"button\",\n      \"bbox\": [274, 144, 296, 172],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [693, 148, 710, 168],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [710, 148, 726, 168],\n      \"text\": \"×\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"menu\",\n      \"bbox\": [246, 172, 388, 528],\n      \"text\": \"网络与无线\\n蓝牙\\n无障碍\\n桌面\\n显示\\n声音\\n电源与电池\\n输入设备\\n应用程序\\n时间与语言\\n系统与账户\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"text\",\n      \"bbox\": [405, 172, 485, 200],\n      \"text\": \"电源与电池\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"text\",\n      \"bbox\": [405, 232, 485, 250],\n      \"text\": \"电池 91% (21 分钟后充满)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"text\",\n      \"bbox\": [405, 272, 438, 288],\n      \"text\": \"电源模式\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"text\",\n      \"bbox\": [405, 300, 476, 316],\n      \"text\": \"延长电池续航\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"text\",\n      \"bbox\": [405, 316, 496, 332],\n      \"text\": \"降低功耗并保持静音运行\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"text\",\n      \"bbox\": [405, 344, 445, 360],\n      \"text\": \"节能\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"text\",\n      \"bbox\": [405, 360, 488, 376],\n      \"text\": \"静音运行和适中的功耗\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-14\",\n",
+    "fine_raw_last": "nt-3\",\n      \"type\": \"button\",\n      \"bbox\": [274, 144, 296, 172],\n      \"text\": \"\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-4\",\n      \"type\": \"button\",\n      \"bbox\": [693, 148, 710, 168],\n      \"text\": \"-\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-5\",\n      \"type\": \"button\",\n      \"bbox\": [710, 148, 726, 168],\n      \"text\": \"×\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-6\",\n      \"type\": \"menu\",\n      \"bbox\": [246, 172, 388, 528],\n      \"text\": \"网络与无线\\n蓝牙\\n无障碍\\n桌面\\n显示\\n声音\\n电源与电池\\n输入设备\\n应用程序\\n时间与语言\\n系统与账户\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-7\",\n      \"type\": \"text\",\n      \"bbox\": [405, 172, 485, 200],\n      \"text\": \"电源与电池\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-8\",\n      \"type\": \"text\",\n      \"bbox\": [405, 232, 485, 250],\n      \"text\": \"电池 91% (21 分钟后充满)\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-9\",\n      \"type\": \"text\",\n      \"bbox\": [405, 272, 438, 288],\n      \"text\": \"电源模式\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-10\",\n      \"type\": \"text\",\n      \"bbox\": [405, 300, 476, 316],\n      \"text\": \"延长电池续航\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-11\",\n      \"type\": \"text\",\n      \"bbox\": [405, 316, 496, 332],\n      \"text\": \"降低功耗并保持静音运行\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-12\",\n      \"type\": \"text\",\n      \"bbox\": [405, 344, 445, 360],\n      \"text\": \"节能\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-13\",\n      \"type\": \"text\",\n      \"bbox\": [405, 360, 488, 376],\n      \"text\": \"静音运行和适中的功耗\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-14\",\n      \"type\": \"text\",\n      \"bbox\": [405, 398, 445, 414],\n      \"text\": \"高性能\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-15\",\n      \"type\": \"text\",\n      \"bbox\": [405, 414, 476, 430],\n      \"text\": \"最高性能和功耗\",\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"element-16\",\n      \"type\": \"text\",\n      \"bbox\": [405, 442, "
+  },
+  "_timing": {
+    "load_s": 3.1,
+    "stage1_s": 3.1,
+    "stage2_s": 20.6,
+    "total_s": 26.9
+  },
+  "_meta": {
+    "model_path": "/home/ruruka/Documents/Models/Qwen3-VL-8B-Instruct",
+    "quantize": "int4",
+    "image_path": "docs/spike-screenshots/COMIC-setting.png",
+    "image_size": [
+      2560,
+      1600
+    ],
+    "scale_factor": 0.5,
+    "max_tokens": 1024
+  }
+}
